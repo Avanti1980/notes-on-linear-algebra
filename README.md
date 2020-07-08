@@ -1,1 +1,1 @@
-https://avanti1980.github.io/Notes-on-Linear-Algebra/
+[学弱的线性代数笔记](https://avanti1980.github.io/Notes-on-Linear-Algebra/)

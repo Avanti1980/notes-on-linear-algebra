@@ -1,6 +1,5 @@
 node_modules/
 font/
 etc/
-img/
 push.sh
 package-lock.json
