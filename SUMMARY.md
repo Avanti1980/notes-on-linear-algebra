@@ -8,4 +8,4 @@
     -   [SVD]
     -   [CSD]
 -   行列式
-    -   [Cauchy-Binet 公式](posts/determinant/Cauchy-Binet.md)
+    -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
