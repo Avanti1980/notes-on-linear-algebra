@@ -16,7 +16,7 @@
 \end{align\*}
 因此$\emptyset$是<span class="violet">单位元</span>，<span class="violet">逆元</span>就是自身，<span class="violet">结合律</span>$(X \Delta Y) \Delta Z = X \Delta (Y \Delta Z)$通过集合运算进行验证较为繁琐，根据下面的Venn图易知其成立。
 <div style="text-align: center">
-    <img alt="对称差" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/981babd5ce02c5d7bc444e0b02291668d2dce4f3/img/symmetric-difference.svg" style="margin: 10px auto"/>
+    <img alt="对称差" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/symmetric-difference.svg" style="margin: 10px auto"/>
 </div>
 
 　　定义乘法为$\cap$，于是<span class="violet">交换律</span>、<span class="violet">结合律</span>都是显然的，由于$X \setminus Y = X \cap \complement Y$，因此
