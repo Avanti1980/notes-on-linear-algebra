@@ -23,3 +23,27 @@
 其中$\Av^*$是$\Av$的伴随矩阵。
 
 对于任意关于$|\Av|$的函数，如$\ln |\Av|$，由链式法则不难求得其导数为$\Av^{-\top}$。
+
+\begin{figure}[htp]
+    \centering
+    \begin{dot2tex}[mathmode]
+        digraph G {
+            rankdir=LR;
+            graph [nodesep=0.05 ranksep=0.001]
+            node [shape="box"];
+            edge [fontname="Symbol" fontsize=10];
+            r [label="(R,+,\times)"];
+            r1 [label="(R,+)"];
+            r2 [label="(R,\times)"];
+            r1 -> 原群 [label="封闭"];
+            原群 -> 半群 [label="结合"];
+            半群 -> 幺半群 [label="单位元"];
+            幺半群 -> 群 [label="逆元"];
+            群 -> 交换群 [label="交换"];
+        }
+    \end{dot2tex}
+    \caption{抽象代数中的环}
+\end{figure}
+
+
+I'm a member of the CGCL/SCTS/BDTS lab at Huazhong University of Science and Technology (HUST). Before joining HUST, I completed my Ph.D. at Nanjing University under the advisement of Prof. Zhi-Hua Zhou.

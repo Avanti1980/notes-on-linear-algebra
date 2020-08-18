@@ -1,1 +1,1 @@
-[学弱的线性代数笔记](https://avanti1980.github.io/notes-on-linear-algebra/)
+[数学笔记](https://avanti1980.github.io/notes-on-math/)
