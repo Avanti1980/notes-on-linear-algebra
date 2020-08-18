@@ -1,6 +1,6 @@
 　　学测度论时会碰到某个非空集合$\Omega$的子集构成的集合$\Acal \subseteq \Pcal(\Omega)$，当其满足(1).$\emptyset \subseteq \Acal$；(2).$\Acal$关于$\setminus$封闭；(3).$\Acal$关于$\cup$封闭，称为<span class="violet">环</span>(ring)。众所周知抽象代数里有个数学结构也叫<span class="violet">环</span>，其上定义了加法、乘法两个二元运算，并且关于加法构成<span class="violet">交换群</span>(commutative group)，关于乘法构成<span class="violet">半群</span>(semigroup)，乘法对加法满足<span class="violet">分配律</span>。
 <div style="text-align: center">
-    <img alt="抽象代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/abstract-algebra.svg" style="margin: 20px auto;"/>
+    <img alt="抽象代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/abstract-algebra.svg" style="margin: 10px auto"/>
 </div>
 
 　　为了区别，下面我们称前者为集合环，后者为代数环。本文说明两者的关系是<span class="violet">$\Acal$能通过赋予合适的集合上的加法、乘法构成代数(交换)环当且仅当$\Acal$是集合环</span>。
@@ -15,6 +15,9 @@
     X \Delta X         & = (X \setminus X) \cup (X \setminus X) = \emptyset
 \end{align\*}
 因此$\emptyset$是<span class="violet">单位元</span>，<span class="violet">逆元</span>就是自身，<span class="violet">结合律</span>$(X \Delta Y) \Delta Z = X \Delta (Y \Delta Z)$通过集合运算进行验证较为繁琐，根据下面的Venn图易知其成立。
+<div style="text-align: center">
+    <img alt="对称差" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/symmetric-difference.svg" style="margin: 10px auto"/>
+</div>
 
 　　定义乘法为$\cap$，于是<span class="violet">交换律</span>、<span class="violet">结合律</span>都是显然的，由于$X \setminus Y = X \cap \complement Y$，因此
 \begin{align\*}
