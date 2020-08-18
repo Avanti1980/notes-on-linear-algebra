@@ -4,11 +4,11 @@
 \end{align\*}
 Riemann积分对定义域区间$[a,b]$进行切分$a = a_0 < a_1 < \cdots < a_{n-1} < a_n = b$，然后用上和
 \begin{align\*}
-    US = \sum\_{i \in [n]} \sup \\{ f(x): x \in [a\_{i-1, a\_i}] \\} (a\_i - a\_{i-1})
+    US = \sum\_{i \in [n]} \sup \\{ f(x): x \in [a\_{i-1}, a\_i] \\} (a\_i - a\_{i-1})
 \end{align\*}
 与下和
 \begin{align\*}
-    LS = \sum\_{i \in [n]} \inf \\{ f(x): x \in [a\_{i-1, a\_i}] \\} (a\_i - a\_{i-1})
+    LS = \sum\_{i \in [n]} \inf \\{ f(x): x \in [a\_{i-1}, a\_i] \\} (a\_i - a\_{i-1})
 \end{align\*}
 对积分值进行夹逼
 \begin{align\*}
