@@ -1,82 +1,25 @@
-　　学测度论时会碰到某个非空集合$\Omega$的子集构成的集合$\Acal \subseteq \Pcal(\Omega)$，当其满足(1). $\emptyset \subseteq \Acal$；(2). $\Acal$关于$\setminus$封闭；(3). $\Acal$关于$\cup$封闭，称为\violet{环}(ring)。众所周知抽象代数里有个数学结构也叫\violet{环}，其上定义了加法、乘法两个二元运算，并且关于加法构成\violet{交换群}(commutative group)，关于乘法构成\violet{半群}(semigroup)，乘法对加法满足\violet{分配律}。
-\begin{align\*}
-    \xymatrix{
-    (R, +) \ar[r]^{\text{封闭性}}      & \text{原群} \ar[r]^{\text{结合律}} & \text{半群} \ar[r]^(.45){\text{单位元}}                                                                    & \text{幺半群} \ar[r]^(.58){\text{逆元}}                          & \text{群} \ar[r]^(.4){\text{交换律}} & \text{交换群} \ar@/\_0.6pc/[dll] \ar[d]                 \\\\
-                                       &                                    & \text{交换环}                                                                                              & (R, +, \times) \ar[r]^(.6){\text{分配律}} \ar[l]\_{\text{分配律}} & \text{环}                            & (R, +, \times) \ar[r]^(.62){\text{分配律}} & \text{域} \\\\
-    (R, \times) \ar[r]^{\text{封闭性}} & \text{原群} \ar[r]^{\text{结合律}} & \text{半群} \ar[r]^(.45){\text{单位元}} \ar@/^0.6pc/@<2pt>[ur]^(.3){\text{交换律}} \ar@/^0.6pc/@<-2pt>[ur] & \text{幺半群} \ar[r]^(.58){\text{逆元}}                          & \text{群} \ar[r]^(.4){\text{交换律}} & \text{交换群} \ar[u]                                   \\\\
-    }
-\end{align\*}
+　　学测度论时会碰到某个非空集合$\Omega$的子集构成的集合$\Acal \subseteq \Pcal(\Omega)$，当其满足(1).$\emptyset \subseteq \Acal$；(2).$\Acal$关于$\setminus$封闭；(3).$\Acal$关于$\cup$封闭，称为<span class="violet">环</span>(ring)。众所周知抽象代数里有个数学结构也叫<span class="violet">环</span>，其上定义了加法、乘法两个二元运算，并且关于加法构成<span class="violet">交换群</span>(commutative group)，关于乘法构成<span class="violet">半群</span>(semigroup)，乘法对加法满足<span class="violet">分配律</span>。
+![ffplay](https://raw.githubusercontent.com/Avanti1980/archlinux/master/img/ffplay.jpg)
+　　为了区别，下面我们称前者为集合环，后者为代数环。本文说明两者的关系是<span class="violet">$\Acal$能通过赋予合适的集合上的加法、乘法构成代数(交换)环当且仅当$\Acal$是集合环</span>。
 
-　　为了区别，下面我们称前者为集合环，后者为代数环。本文说明两者的关系是\violet{$\Acal$能通过赋予合适的集合上的加法、乘法构成代数(交换)环当且仅当$\Acal$是集合环}。
-
-　　$\Leftarrow$较为简单，给出具体的加法、乘法定义再验证满足代数环公理即可。定义集合环$\Acal$中的加法为\violet{对称差}：
+　　$\Leftarrow$较为简单，给出具体的加法、乘法定义再验证满足代数环公理即可。定义集合环$\Acal$中的加法为<span class="violet">对称差</span>：
 \begin{align\*}
     X \Delta Y = (X \setminus Y) \cup (Y \setminus X), \quad \forall X, Y \in \Acal
 \end{align\*}
-不难验证$(\Acal, \Delta)$构成\violet{交换群}，其中\violet{交换律}是显然的，\violet{封闭性}由集合环关于$\setminus$、$\cup$封闭保证，又
+不难验证$(\Acal, \Delta)$构成<span class="violet">交换群</span>，其中<span class="violet">交换律</span>是显然的，<span class="violet">封闭性</span>由集合环关于$\setminus$、$\cup$封闭保证，又
 \begin{align\*}
     X \Delta \emptyset & = (X \setminus \emptyset) \cup (\emptyset \setminus X) = X \\\\
     X \Delta X         & = (X \setminus X) \cup (X \setminus X) = \emptyset
 \end{align\*}
-因此$\emptyset$是\violet{单位元}，\violet{逆元}就是自身，\violet{结合律}$(X \Delta Y) \Delta Z = X \Delta (Y \Delta Z)$通过集合运算进行验证较为繁琐，根据下面的Venn图易知其成立。
-\begin{figure}[htp]
-    \centering
-    \subfigure[$X \Delta Y$]
-    {
-        \centering
-        \begin{tikzpicture}[fill=Solarized-cyan, text=Solarized-base01, scale=0.8]
-            \begin{scope}[even odd rule]
-                \clip \firstcircle
-                \secondcircle;
-                \fill \firstcircle;
-            \end{scope}
-            \begin{scope}[even odd rule]
-                \clip \secondcircle
-                \firstcircle;
-                \fill \secondcircle;
-            \end{scope}
-            \draw \firstcircle node[above] {$X$};
-            \draw \secondcircle node [below left] {$Y$};
-            \draw \thirdcircle node [below right] {$Z$};
-        \end{tikzpicture}
-    }
-    \hspace{1cm}
-    \subfigure[$(X \Delta Y) \Delta Z$]
-    {
-        \begin{tikzpicture}[fill=Solarized-cyan, text=Solarized-base01, scale=0.8]
-            \begin{scope}[even odd rule]
-                \clip \firstcircle
-                \secondcircle
-                \thirdcircle;
-                \fill \firstcircle;
-            \end{scope}
-            \begin{scope}[even odd rule]
-                \clip \secondcircle
-                \thirdcircle
-                \firstcircle;
-                \fill \secondcircle;
-            \end{scope}
-            \begin{scope}[even odd rule]
-                \clip \thirdcircle
-                \firstcircle
-                \secondcircle;
-                \fill \thirdcircle;
-            \end{scope}
-            \draw \firstcircle node[above] {$X$};
-            \draw \secondcircle node [below left] {$Y$};
-            \draw \thirdcircle node [below right] {$Z$};
-        \end{tikzpicture}
-    }
-    %\caption{Xn example of the procedure}
-\end{figure}
+因此$\emptyset$是<span class="violet">单位元</span>，<span class="violet">逆元</span>就是自身，<span class="violet">结合律</span>$(X \Delta Y) \Delta Z = X \Delta (Y \Delta Z)$通过集合运算进行验证较为繁琐，根据下面的Venn图易知其成立。
 
-　　定义乘法为$\cap$，于是\violet{交换律}、\violet{结合律}都是显然的，由于$X \setminus Y = X \cap \complement Y$，因此
+　　定义乘法为$\cap$，于是<span class="violet">交换律</span>、<span class="violet">结合律</span>都是显然的，由于$X \setminus Y = X \cap \complement Y$，因此
 \begin{align\*}
     X \setminus (X \setminus Y) = X \setminus (X \cap \complement Y) = X \cap \complement (X \cap \complement Y) = X \cap (\complement X \cup Y) = X \cap Y
 \end{align\*}
-即\violet{封闭性}也是满足的(这也说明集合环关于$\cup$、$\cap$、$\setminus$都是封闭的)。
+即<span class="violet">封闭性</span>也是满足的(这也说明集合环关于$\cup$、$\cap$、$\setminus$都是封闭的)。
 
-　　最后验证$\Delta$对于$\cap$满足\violet{分配律}，由于
+　　最后验证$\Delta$对于$\cap$满足<span class="violet">分配律</span>，由于
 \begin{align\*}
     X \Delta Y = (X \setminus Y) \cup (Y \setminus X) = (X \cap \complement Y) \cup (Y \cap \complement X) = (X \cup Y) \cap (\complement X \cup \complement Y)
 \end{align\*}
@@ -140,7 +83,7 @@
 \begin{align\*}
     (1\_X,1\_Y) \mapsto 1\_X \oplus 1\_Y = 1\_{X \Delta Y}
 \end{align\*}
-\violet{两个集合的特征函数的加和等于其对称差的特征函数}。$R$上的乘法规则不唯一
+<span class="violet">两个集合的特征函数的加和等于其对称差的特征函数</span>。$R$上的乘法规则不唯一
 \begin{align\*}
     \otimes: ~ & (1\_X,1\_Y) \mapsto (1\_X \otimes 1\_Y) (a) = \begin{cases}
         0 \times 0 = 0             & \forall a \in \Omega \setminus (X \cup Y) \\\\
