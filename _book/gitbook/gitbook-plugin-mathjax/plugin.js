@@ -96,6 +96,7 @@ require(['gitbook'], function(gitbook) {
         spn: '{\\mathrm {span}}',
         sign: '{\\mathrm {sign}}',
         st: '{\\mathrm {s.t.}}',
+        tr: '{\\mathrm {tr}}',
         ow: '{\\mathrm {o.w.}}',
         dom: '{\\mathrm {dom}}',
         sgn: '{\\mathrm {sgn}}',
