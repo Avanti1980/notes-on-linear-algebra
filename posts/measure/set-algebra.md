@@ -70,7 +70,7 @@ Riemann积分对定义域区间$[a,b]$进行切分$a = a_0 < a_1 < \cdots < a_{n
 
 　　综上，半环、环、代数、$\sigma$-环、$\sigma$-代数之间的关系如下：
 <div style="text-align: center">
-    <img alt="集合代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/set-algebra.svg" style="margin: 10px auto;width:30%"/>
+    <img alt="集合代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/set-algebra.svg" style="margin: 10px auto; width:30%"/>
 </div>
 
 　　测度论一般采用$\sigma$-代数作为考虑对象，即对$\sigma$-代数中的任一集合赋予长度。具体到一维积分，这意味着全集$\Rbb$是有长度的，若$A \subseteq \Rbb$是$\sigma$-代数中的集合，即可以赋予长度，那么$\Rbb \setminus A$也是可以赋予长度的，若$A_1, A_2, \ldots$可以赋予长度，那么其并集也可以赋予长度。
