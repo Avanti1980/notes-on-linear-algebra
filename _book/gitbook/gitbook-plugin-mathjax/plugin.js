@@ -98,6 +98,7 @@ require(['gitbook'], function(gitbook) {
         st: '{\\mathrm {s.t.}}',
         ow: '{\\mathrm {o.w.}}',
         dom: '{\\mathrm {dom}}',
+        sgn: '{\\mathrm {sgn}}',
         VC: '{\\mathrm {VC}}',
         argmin: '{\\arg \\min}',
         argmax: '{\\arg \\max}',
