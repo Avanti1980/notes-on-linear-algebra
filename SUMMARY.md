@@ -10,5 +10,5 @@
     -   行列式
         -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
 -   测度
-    -   集合代数
-        -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
+    -   [集合代数](posts/measure/set-algebra.md)
+    -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
