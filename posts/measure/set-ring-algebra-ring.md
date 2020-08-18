@@ -1,5 +1,7 @@
 　　学测度论时会碰到某个非空集合$\Omega$的子集构成的集合$\Acal \subseteq \Pcal(\Omega)$，当其满足(1).$\emptyset \subseteq \Acal$；(2).$\Acal$关于$\setminus$封闭；(3).$\Acal$关于$\cup$封闭，称为<span class="violet">环</span>(ring)。众所周知抽象代数里有个数学结构也叫<span class="violet">环</span>，其上定义了加法、乘法两个二元运算，并且关于加法构成<span class="violet">交换群</span>(commutative group)，关于乘法构成<span class="violet">半群</span>(semigroup)，乘法对加法满足<span class="violet">分配律</span>。
-<img alt="抽象代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/abstract-algebra.svg" style="margin: 20px auto;"/>
+<div style="text-align: center">
+    <img alt="抽象代数" src="https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/abstract-algebra.svg" style="margin: 20px auto;"/>
+</div>
 
 　　为了区别，下面我们称前者为集合环，后者为代数环。本文说明两者的关系是<span class="violet">$\Acal$能通过赋予合适的集合上的加法、乘法构成代数(交换)环当且仅当$\Acal$是集合环</span>。
 
