@@ -29,9 +29,9 @@
      & m((a,b)) = m([a,b)) = m((a,b]) = m([a,b]) = b - a, \quad m(\emptyset) = 0                       \\\\
      & m((a,\infty)) = m([a,\infty)) = m((-\infty,a)) = m((-\infty,a]) = m((-\infty, \infty)) = \infty
 \end{align\*}
-对任意$E = I_1 \cup \cdots \cup I_n \in \Ical$，\red{定义}$m(E) = \sum_{j \in [n]} m(I_j)$。
+对任意$E = I_1 \cup \cdots \cup I_n \in \Ical$，<span class="red">定义</span>$m(E) = \sum_{j \in [n]} m(I_j)$。
 
-上述定义的长度函数$m: \Ical \mapsto [0, \infty]$满足
+　　上述定义的长度函数$m: \Ical \mapsto [0, \infty]$满足
 1. <span class="violet">有限可加性</span>：设$E_1, E_2, \ldots, E_n \in \Ical$且两两不相交，则$m(\cup_{j \in [n]} E_j) = \sum_{j \in [n]} m(E_j)$；
 2. <span class="violet">单调性</span>：设$E_1, E_2 \in \Ical$且$E_1 \subseteq E_2$，则$m(E_1) \leq m(E_2)$；
 3. <span class="violet">有限次可加性</span>：设$E_1, E_2, \ldots \in \Ical$，则$m(\cup_{j \in [n]} E_j) \leq \sum_{j \in [n]} m(E_j)$；
@@ -75,21 +75,21 @@
 \end{align\*}
 令$n \rightarrow \infty$可得$\sum_{k=1}^\infty m(I_k) \leq m(I)$。
 
-下面证明另一个方向，不妨设所有的$I_k$都是有界区间(否则若某个$I_k$无界，则$I$也无界，上式两边都是$\infty$)，则对$\forall \epsilon > 0$，存在开区间$J_k$从外部充分逼近$I_k$，即$I_k \subseteq J_k$且$m(J_k) < m(I_k) + \epsilon / 2^k$。引入有界闭区间$[a_0, b_0] \subseteq I$，于是
-\begin{align\*}
-    [a\_0, b\_0] \subseteq I = \cup\_{k=1}^\infty I\_k \subseteq \cup\_{k=1}^\infty J\_k
-\end{align\*}
-即$J_1, J_2, \ldots$是有界闭区间$[a_0, b_0]$的一个<span class="violet">开覆盖</span>(open cover)，由Heine-Borel定理知其<span class="violet">存在有限子覆盖</span>，不妨设子覆盖的下标集合是$\Ical'$，于是由有限可加性和单调性知
-\begin{align\*}
-    a\_0 - b\_0 = m([a\_0, b\_0]) \leq \sum\_{k \in \Ical'} m(J\_k) < \sum\_{k \in \Ical'} \left( m(I\_k) + \frac{\epsilon}{2^k} \right) \leq \sum\_{k=1}^\infty \left( m(I\_k) + \frac{\epsilon}{2^k} \right) = \epsilon + \sum\_{k=1}^\infty m(I\_k)
-\end{align\*}
-若$I$无界，可以选取$[a_0, b_0]$使得$b_0 - a_0$任意的大，而$\epsilon$又可以任意的小，于是有$\sum_{k=1}^\infty m(I_k) = \infty = m(I)$；若$I$有界，选取$[a_0, b_0]$从内部充分逼近$I$，即使得$b_0 - a_0 > m(I) - \epsilon$，于是有
-\begin{align\*}
-    m(I) - \epsilon < \epsilon + \sum\_{k=1}^\infty m(I\_k)
-\end{align\*}
-由于$\epsilon$可以任意的小，故$m(I) \leq \sum_{k=1}^\infty m(I_k)$。
+    下面证明另一个方向，不妨设所有的$I_k$都是有界区间(否则若某个$I_k$无界，则$I$也无界，上式两边都是$\infty$)，则对$\forall \epsilon > 0$，存在开区间$J_k$从外部充分逼近$I_k$，即$I_k \subseteq J_k$且$m(J_k) < m(I_k) + \epsilon / 2^k$。引入有界闭区间$[a_0, b_0] \subseteq I$，于是
+    \begin{align\*}
+        [a\_0, b\_0] \subseteq I = \cup\_{k=1}^\infty I\_k \subseteq \cup\_{k=1}^\infty J\_k
+    \end{align\*}
+    即$J_1, J_2, \ldots$是有界闭区间$[a_0, b_0]$的一个<span class="violet">开覆盖</span>(open cover)，由Heine-Borel定理知其<span class="violet">存在有限子覆盖</span>，不妨设子覆盖的下标集合是$\Ical'$，于是由有限可加性和单调性知
+    \begin{align\*}
+        a\_0 - b\_0 = m([a\_0, b\_0]) \leq \sum\_{k \in \Ical'} m(J\_k) < \sum\_{k \in \Ical'} \left( m(I\_k) + \frac{\epsilon}{2^k} \right) \leq \sum\_{k=1}^\infty \left( m(I\_k) + \frac{\epsilon}{2^k} \right) = \epsilon + \sum\_{k=1}^\infty m(I\_k)
+    \end{align\*}
+    若$I$无界，可以选取$[a_0, b_0]$使得$b_0 - a_0$任意的大，而$\epsilon$又可以任意的小，于是有$\sum_{k=1}^\infty m(I_k) = \infty = m(I)$；若$I$有界，选取$[a_0, b_0]$从内部充分逼近$I$，即使得$b_0 - a_0 > m(I) - \epsilon$，于是有
+    \begin{align\*}
+        m(I) - \epsilon < \epsilon + \sum\_{k=1}^\infty m(I\_k)
+    \end{align\*}
+    由于$\epsilon$可以任意的小，故$m(I) \leq \sum_{k=1}^\infty m(I_k)$。
 
-综上有$m(\cup_{k=1}^\infty I_k) = m(I) = \sum_{k=1}^\infty m(I_k)$。
+    综上有$m(\cup_{k=1}^\infty I_k) = m(I) = \sum_{k=1}^\infty m(I_k)$。
 
 5. 令$F_j = E_j \setminus (\cup_{k \in [j-1]} E_k) \subseteq E_j$，易知$F_1, F_2, \ldots$两两不相交且对任意自然数$n$有$\cup_{j \in [n]} F_j = \cup_{j \in [n]} E_j$，于是
 \begin{align\*}
