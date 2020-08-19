@@ -76,16 +76,13 @@
 令$n \rightarrow \infty$可得$\sum_{k=1}^\infty m(I_k) \leq m(I)$。
 
     下面证明另一个方向，不妨设所有的$I_k$都是有界区间(否则若某个$I_k$无界，则$I$也无界，上式两边都是$\infty$)，则对$\forall \epsilon > 0$，存在开区间$J_k$从外部充分逼近$I_k$，即$I_k \subseteq J_k$且$m(J_k) < m(I_k) + \epsilon / 2^k$。引入有界闭区间$[a_0, b_0] \subseteq I$，于是
-    \begin{align\*}
-        [a\_0, b\_0] \subseteq I = \cup\_{k=1}^\infty I\_k \subseteq \cup\_{k=1}^\infty J\_k
+    \begin{align\*} [a\_0, b\_0] \subseteq I = \cup\_{k=1}^\infty I\_k \subseteq \cup\_{k=1}^\infty J\_k
     \end{align\*}
     即$J_1, J_2, \ldots$是有界闭区间$[a_0, b_0]$的一个<span class="violet">开覆盖</span>(open cover)，由Heine-Borel定理知其<span class="violet">存在有限子覆盖</span>，不妨设子覆盖的下标集合是$\Ical'$，于是由有限可加性和单调性知
-    \begin{align\*}
-        a\_0 - b\_0 = m([a\_0, b\_0]) \leq \sum\_{k \in \Ical'} m(J\_k) < \sum\_{k \in \Ical'} \left( m(I\_k) + \frac{\epsilon}{2^k} \right) \leq \sum\_{k=1}^\infty \left( m(I\_k) + \frac{\epsilon}{2^k} \right) = \epsilon + \sum\_{k=1}^\infty m(I\_k)
+    \begin{align\*} a\_0 - b\_0 = m([a\_0, b\_0]) \leq \sum\_{k \in \Ical'} m(J\_k) < \sum\_{k \in \Ical'} \left( m(I\_k) + \frac{\epsilon}{2^k} \right) \leq \sum\_{k=1}^\infty \left( m(I\_k) + \frac{\epsilon}{2^k} \right) = \epsilon + \sum\_{k=1}^\infty m(I\_k)
     \end{align\*}
     若$I$无界，可以选取$[a_0, b_0]$使得$b_0 - a_0$任意的大，而$\epsilon$又可以任意的小，于是有$\sum_{k=1}^\infty m(I_k) = \infty = m(I)$；若$I$有界，选取$[a_0, b_0]$从内部充分逼近$I$，即使得$b_0 - a_0 > m(I) - \epsilon$，于是有
-    \begin{align\*}
-        m(I) - \epsilon < \epsilon + \sum\_{k=1}^\infty m(I\_k)
+    \begin{align\*} m(I) - \epsilon < \epsilon + \sum\_{k=1}^\infty m(I\_k)
     \end{align\*}
     由于$\epsilon$可以任意的小，故$m(I) \leq \sum_{k=1}^\infty m(I_k)$。
 
