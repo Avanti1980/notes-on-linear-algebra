@@ -22,7 +22,7 @@
 \begin{align\*}
     x\_1 < t\_1 < x\_2 < t\_2 < \cdots < t\_{n-1} < x\_n, \quad \forall x\_j \in I\_j, ~ j \in [n]
 \end{align\*}
-后文如无特殊说明，$\Ical$中的任一写成该形式的集合默认为其标准形式。
+后文如无特殊说明，$\Ical$中的任一写成该形式的元素默认为其标准形式。
 
 　　下面考虑给区间赋予长度，直觉上来说<span class="violet">区间长度就是其端点的差值，无界区间长度为$\infty$，不相交区间的并的长度是它们的长度之和</span>，故引入长度函数$m: \Ical \mapsto [0, \infty]$：
 \begin{align\*}
