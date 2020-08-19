@@ -12,3 +12,4 @@
 -   测度
     -   [集合代数](posts/measure/set-algebra.md)
     -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
+    -   [区间](posts/measure/interval.md)
