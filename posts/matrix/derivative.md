@@ -1,4 +1,4 @@
-　　标量、向量、矩阵间的求导共有9种可能，其中<span class="green">$\partial 标量 / \partial 标量$</span>就是我们熟悉的单变量微积分，<span class="red">$\partial 向量 / \partial 矩阵$</span>、<span class="red">$\partial 矩阵 / \partial 向量$</span>、<span class="red">$\partial 矩阵 / \partial 矩阵$</span>会涉及高阶张量，处理更为麻烦，因此本文只考虑剩下的5种情形。
+　　标量、向量、矩阵间的求导共有9种可能，其中$\color{green}{\partial 标量 / \partial 标量}$就是我们熟悉的单变量微积分，$\color{red}{\partial 向量 / \partial 矩阵}$、$\color{red}{\partial 矩阵 / \partial 向量}$、$\color{red}{\partial 矩阵 / \partial 矩阵}$会涉及高阶张量，处理更为麻烦，因此本文只考虑剩下的5种情形。
 
 　　设$\uv \in \Rbb^l$，$\Uv \in \Rbb^{m \times n}$，则向量、矩阵对标量求导的定义为
 \begin{align\*}
