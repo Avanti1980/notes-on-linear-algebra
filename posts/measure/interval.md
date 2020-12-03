@@ -94,6 +94,6 @@
 \end{align\*}
 令$n \rightarrow \infty$可知$m(\cup_{j=1}^\infty E_j) \leq \sum_{j=1}^\infty m(E_j)$。
   
-6. 设$E = \cup_{j=1}^\infty I_j$，则$E + x_0 = \cup_{j=1}^\infty (I_j + x_0)$。若$I_j$有界，设其端点分别为$a$、$b$，则$I_j + x_0$依然有界且端点分别为$a + x_0$、$b + x_0$，于是$m(I_j + x_0) = (b + x_0) - (a + x_0) = b - a = m(I_j)$；若$I_j$无界，则$I_j + x_0$也无界($\pm \infty + x_0 = \pm \infty$)，且$m(I_j + x_0) = \infty = m(I_j)$，综上有$m(E + x_0) = m(E)$。
+6. 设$E = \cup_{j \in [n]} I_j$，则$E + x_0 = \cup_{j \in [n]} (I_j + x_0)$。若$I_j$有界，设其端点分别为$a$、$b$，则$I_j + x_0$依然有界且端点分别为$a + x_0$、$b + x_0$，于是$m(I_j + x_0) = (b + x_0) - (a + x_0) = b - a = m(I_j)$；若$I_j$无界，则$I_j + x_0$也无界($\pm \infty + x_0 = \pm \infty$)，且$m(I_j + x_0) = \infty = m(I_j)$，综上有$m(E + x_0) = m(E)$。
 
 

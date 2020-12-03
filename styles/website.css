@@ -91,9 +91,9 @@
 }
 
 .MathJax .MathJax_ref {
-    color: var(--yellow) !important;
+    color: var(--yellow);
 }
 
 .MathJax_Display > .MathJax {
-    color: var(--magenta) !important;
+    color: var(--magenta);
 }
