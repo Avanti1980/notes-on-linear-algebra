@@ -8,9 +8,7 @@
 - $[\Av, \pm \Av]$是全幺模矩阵，设$\Bv$是$[\Av, \pm \Av]$的任意子方阵，则$\Bv$的每一列要么来自于$\Av$的某一列，要么来自于$\pm \Av$的某一列。若有两列相同或仅差一个符号，则$\Bv$是奇异矩阵，从而$\det(\Bv) = 0$；否则$\Bv$可直接由$\Av$的某个子方阵得到(最多对部分列再取反)，这只会影响行列式的符号，因此$\det(\Bv) \in \{ \pm 1 \}$。
 - $[\Av, \pm \Iv]$是全幺模矩阵，设$\Bv$是$[\Av, \pm \Iv]$的任意非奇异子方阵，若$\Bv$是$\Av$或$\pm \Iv$其中之一的子方阵，易知有$|\det(\Bv)| = 1$，否则设$\Bv = [\overline{\Av}, \pm \overline{\Iv}]$，其中$\overline{\Av}$、$\overline{\Iv}$分别是$\Av$或$\Iv$的子矩阵且都是列满秩的(否则$\Bv$奇异)，互换$\Bv$的某些行可得
 \begin{align\*}
-    \overline{\Bv} = \begin{bmatrix}
-        \overline{\Av}\_1 & \zerov \\\\ \overline{\Av}\_2 & \pm \hat{\Iv}
-    \end{bmatrix}
+    \overline{\Bv} = \begin{bmatrix} \overline{\Av}\_1 & \zerov \\\\ \overline{\Av}\_2 & \pm \hat{\Iv} \end{bmatrix}
 \end{align\*}
 于是$|\det(\overline{\Bv})| = |\det(\overline{\Av}_1)| \cdot |\det(\pm \hat{\Iv})| = |\det(\overline{\Av}_1)|$，而$\overline{\Av}_1$是$\Av$的某个非奇异子方阵交换行得到的，故$|\det(\Bv)| = |\det(\overline{\Bv})| = |\det(\overline{\Av}_1)| = 1$。
 - $[\Av; \pm \Iv]$是全幺模矩阵，因为$[\Av; \pm \Iv] = [\Av^\top, \pm \Iv]^\top$，其中$\Av^\top$是全幺模矩阵，故$[\Av^\top, \pm \Iv]$是全幺模矩阵，取转置后依然是全幺模矩阵。
