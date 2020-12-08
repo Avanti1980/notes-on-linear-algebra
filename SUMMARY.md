@@ -4,6 +4,7 @@
 -   线性代数
     -   矩阵
         -   [导数](posts/matrix/derivative.md)
+        -   [全幺模矩阵](posts/matrix/TU-matrix.md)
     -   逆
     -   谱
     -   分解
