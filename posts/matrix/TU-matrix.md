@@ -13,7 +13,7 @@
 于是$|\det(\overline{\Bv})| = |\det(\overline{\Av}_1)| \cdot |\det(\pm \hat{\Iv})| = |\det(\overline{\Av}_1)|$，而$\overline{\Av}_1$是$\Av$的某个非奇异子方阵交换行得到的，故$|\det(\Bv)| = |\det(\overline{\Bv})| = |\det(\overline{\Av}_1)| = 1$。
 - $[\Av; \pm \Iv]$是全幺模矩阵，因为$[\Av; \pm \Iv] = [\Av^\top, \pm \Iv]^\top$，其中$\Av^\top$是全幺模矩阵，故$[\Av^\top, \pm \Iv]$是全幺模矩阵，取转置后依然是全幺模矩阵。
 
-　　全幺模矩阵导出的凸多面体的极点是整数向量，若这样的凸多面体是某个线性规划的可行域，那么该线性规划的最优解是整数解，换言之相应的整数线性规划可以通过放松成一般的线性规划来做。
+　　全幺模矩阵导出的凸多面体的[极点](https://avanti1980.github.io/notes-on-math/posts/convex-optimization/extreme-point.html)是整数向量，若这样的凸多面体是某个线性规划的可行域，那么该线性规划的最优解是整数解，换言之相应的整数线性规划可以通过放松成一般的线性规划来做。
 
 **定理1**. 设$\Av \in \{ 0, \pm 1 \}^{m \times n}$是全幺模矩阵，$\bv \in \Zbb^m$是整数向量，则凸多面体$\Pcal = \{ \xv \in \Rbb^n \mid \Av \xv \leq \bv \}$的极点都是整数向量。
 
