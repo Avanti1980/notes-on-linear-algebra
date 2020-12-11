@@ -54,6 +54,7 @@
     & \qquad + \cdots + (x\_{e\_n} - x\_{e\_{n-1}}) \xv^{(\Mcal\_n)} + (1 - x\_{e\_n}) \zerov \in \Pcal (\Gcal)
 \end{align\*}
 
+
 　　由定义$\Pcal (\Gcal) = \conv \{ \xv^{(\Mcal_1)}, \xv^{(\Mcal_2)}, \ldots \}$知$\Pcal (\Gcal)$的任意极点都是$\Gcal$的匹配，反过来结论也成立。
 
 **定理2**：$\Gcal$的任意匹配都是$\Pcal$的极点。
@@ -196,5 +197,5 @@ $\Av'$为$\Av$去掉$s$、$t$对应行的子矩阵，注意有向流网络中源
 - 根据第三个不等号取等号，当流量达到最大时，$\delta_{\text{out}}(\Scal)$中每条边的流量都达到上限，这个也可由互补松弛条件$z_e (x_e - c_e) = 0$得到：$z_e^\star = 1 > 0 \Longrightarrow x_e^\star = c_e$；
 - 根据第四个不等号取等号，$\delta_{\text{out}}(\Scal)$上的流量全部进入$t$，不存在折回$\Scal$的情况，即$\delta_{\text{in}}(\Scal)$上的流量为零，这个也可由互补松弛条件$y_e x_e = 0$得到：$z_e^\star = 0 > -1 = w_u^\star - w_v^\star$，故$y_e^\star = z_e^\star - (w_u^\star - w_v^\star) > 0$，从而$x_e^\star = 0$。
 
-　　
+
 
