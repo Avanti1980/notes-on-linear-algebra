@@ -12,8 +12,7 @@
         -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
 -   凸优化
     -   [极点的等价定义](posts/convex-optimization/extreme-point.md)
-    -   最大匹配与最小覆盖
-    -   最大流与最小割
+    -   [匹配、覆盖、流、割](posts/convex-optimization/MCFC.md)
 -   测度论
     -   [集合代数](posts/measure/set-algebra.md)
     -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
