@@ -9,7 +9,7 @@
     -   谱
     -   分解
     -   行列式
-        -   [Cauchy-Binet 公式](posts/determinant/Cauchy-Binet.md)
+        -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
 -   优化
     -   对偶
         -   [线性规划下的解释](posts/optimization/dual/LP-dual-interpretation.md)
