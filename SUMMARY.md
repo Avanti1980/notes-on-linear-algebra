@@ -9,10 +9,12 @@
     -   谱
     -   分解
     -   行列式
-        -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
--   凸优化
-    -   [极点的等价定义](posts/convex-optimization/extreme-point.md)
-    -   [匹配、覆盖、流、割](posts/convex-optimization/MCFC.md)
+        -   [Cauchy-Binet 公式](posts/determinant/Cauchy-Binet.md)
+-   优化
+    -   对偶
+        -   [线性规划下的解释](posts/optimization/dual/LP-dual-interpretation.md)
+        -   [极点的等价定义](posts/optimization/dual/extreme-point.md)
+        -   [匹配、覆盖、流、割](posts/optimization/dual/MCFC.md)
 -   测度论
     -   [集合代数](posts/measure/set-algebra.md)
     -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
