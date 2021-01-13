@@ -1,0 +1,649 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>核范数球 · Notes on Math</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="derivative.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    线性代数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="derivative.html">
+            
+                <a href="derivative.html">
+            
+                    
+                    导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="nuclear-norm-ball.html">
+            
+                <a href="nuclear-norm-ball.html">
+            
+                    
+                    核范数球
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    逆
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    谱
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分解
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    行列式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../determinant/Cauchy-Binet.html">
+            
+                <a href="../determinant/Cauchy-Binet.html">
+            
+                    
+                    Cauchy-Binet公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    凸优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../convex-optimization/extreme-point.md">
+            
+                <span>
+            
+                    
+                    极点的等价定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    最大匹配与最小覆盖
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    最大流与最小割
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测度论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../measure/set-algebra.html">
+            
+                <a href="../measure/set-algebra.html">
+            
+                    
+                    集合代数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../measure/set-ring-algebra-ring.html">
+            
+                <a href="../measure/set-ring-algebra-ring.html">
+            
+                    
+                    此环非彼环乎？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../measure/interval.html">
+            
+                <a href="../measure/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >核范数球</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;&#x5411;&#x91CF;&#x7684;<script type="math/tex; ">\ell\_p</script>&#x8303;&#x6570;&#x7403;&#x90FD;&#x5F88;&#x5BB9;&#x6613;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x4F46;&#x662F;&#x77E9;&#x9635;&#x7684;&#x5C31;&#x6CA1;&#x90A3;&#x4E48;&#x5BB9;&#x6613;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;<script type="math/tex; ">\Sbb\_2</script>&#x7684;&#x6838;&#x8303;&#x6570;&#x7403;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;&#x8BBE;\begin{align*}
+    \Mv = \begin{bmatrix}
+        x &amp; y \\ y &amp; z
+    \end{bmatrix}, \quad \Mv^\top \Mv = \begin{bmatrix}
+        x &amp; y \\ y &amp; z
+    \end{bmatrix} \begin{bmatrix}
+        x &amp; y \\ y &amp; z
+    \end{bmatrix} = \begin{bmatrix}
+        x^2 + y^2 &amp; y (x + z) \\ y (x + z) &amp; y^2 + z^2
+    \end{bmatrix}
+\end{align*}
+&#x4E8E;&#x662F;<script type="math/tex; ">\Mv^\top \Mv</script>&#x7684;&#x7279;&#x5F81;&#x65B9;&#x7A0B;&#x4E3A;
+\begin{align*}
+    0 &amp; = t^2 - (x^2 + 2 y^2 + z^2) t + (x^2 + y^2) (y^2 + z^2) - y^2 (x + z)^2         \\
+      &amp; = t^2 - (x^2 + 2 y^2 + z^2) t + x^2 z^2 + y^4 + y^2 (x^2 + z^2) - y^2 (x + z)^2 \\
+      &amp; = t^2 - (x^2 + 2 y^2 + z^2) t + x^2 z^2 + y^4 - y^2 \cdot 2 x z                 \\
+      &amp; = t^2 - (x^2 + 2 y^2 + z^2) t + (y^2 - xz)^2
+\end{align*}
+&#x6613;&#x77E5;&#x4E24;&#x4E2A;&#x7279;&#x5F81;&#x6839;&#x5206;&#x522B;&#x4E3A;
+\begin{align*}
+    t_{1,2} = \frac{x^2 + 2 y^2 + z^2 \pm \sqrt{(x^2 + 2 y^2 + z^2)^2 - 4 (y^2 - xz)^2}}{2}
+\end{align*}
+&#x6545;<script type="math/tex; ">\Mv</script>&#x7684;&#x4E24;&#x4E2A;&#x5947;&#x5F02;&#x503C;&#x5206;&#x522B;&#x4E3A;
+\begin{align*}
+    \sigma_{1,2} = \frac{1}{\sqrt{2}} \sqrt{x^2 + 2 y^2 + z^2 \pm \sqrt{(x^2 + 2 y^2 + z^2)^2 - 4 (y^2 - xz)^2}}
+\end{align*}</p>
+<p>&#x3000;&#x3000;&#x663E;&#x7136;<script type="math/tex; ">\|\Mv\|_* \le 1</script>&#x7684;&#x8FB9;&#x754C;&#x4E3A;<script type="math/tex; ">\|\Mv\|_* = 1</script>&#xFF0C;&#x5373;<script type="math/tex; ">\sigma_1 + \sigma_2 = 1</script>&#xFF0C;&#x4E24;&#x8FB9;&#x5E73;&#x65B9;&#x53EF;&#x5F97;
+\begin{align*}
+    1 &amp; = \sigma_1^2 + \sigma_2^2 + 2 \sigma_1 \sigma_2                                               \\
+      &amp; = x^2 + 2 y^2 + z^2 + \sqrt{(x^2 + 2 y^2 + z^2)^2 - ((x^2 + 2 y^2 + z^2)^2 - 4 (y^2 - xz)^2)} \\
+      &amp; = x^2 + 2 y^2 + z^2 + \sqrt{4 (y^2 - xz)^2}                                                   \\
+      &amp; = x^2 + 2 y^2 + z^2 + 2 |y^2 - xz|                                                            \\
+      &amp; = \begin{cases}
+        (x + z)^2         &amp; xz \ge y^2 \\
+        (x - z)^2 + 4 y^2 &amp; xz &lt; y^2
+    \end{cases}
+\end{align*}
+&#x8FD9;&#x5C31;&#x662F;&#x6838;&#x8303;&#x6570;&#x7403;&#x8FB9;&#x754C;&#x7684;&#x65B9;&#x7A0B;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x73B0;&#x5C06;<script type="math/tex; ">xoz</script>&#x5E73;&#x9762;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;45&#x5EA6;&#xFF0C;&#x4E8E;&#x662F;&#x65B0;&#x7684;&#x5750;&#x6807;&#x6EE1;&#x8DB3;
+\begin{align*}
+    \begin{bmatrix}
+        x&apos; \\ z&apos;
+    \end{bmatrix} = \begin{bmatrix}
+        \cos 45^\circ &amp; - \sin 45^\circ \\ \sin 45^\circ &amp; \cos 45^\circ
+    \end{bmatrix} \begin{bmatrix}
+        x \\ z
+    \end{bmatrix} = \frac{\sqrt{2}}{2} \begin{bmatrix}
+        x - z \\ x + z
+    \end{bmatrix}, \quad \begin{bmatrix}
+        x \\ z
+    \end{bmatrix} = \begin{bmatrix}
+        \cos 45^\circ &amp; \sin 45^\circ \\ - \sin 45^\circ &amp; \cos 45^\circ
+    \end{bmatrix} \begin{bmatrix}
+        x&apos; \\ z&apos;
+    \end{bmatrix} = \frac{\sqrt{2}}{2} \begin{bmatrix}
+        z&apos; + x&apos; \\ z&apos; - x&apos;
+    \end{bmatrix}
+\end{align*}
+&#x6CE8;&#x610F;<script type="math/tex; ">xz = (z'^2 - x'^2) / 2</script>&#xFF0C;&#x6545;&#x6838;&#x8303;&#x6570;&#x7403;&#x8FB9;&#x754C;&#x5728;<script type="math/tex; ">x'yz'</script>&#x5750;&#x6807;&#x7CFB;&#x4E0B;&#x7684;&#x65B9;&#x7A0B;&#x4E3A;
+\begin{align*}
+    1 = \begin{cases}
+        2 z&apos;^2         &amp; z&apos;^2 - x&apos;^2 \ge 2 y^2 \\
+        2 x&apos;^2 + 4 y^2 &amp; z&apos;^2 - x&apos;^2 &lt; 2 y^2
+    \end{cases}
+\end{align*}
+&#x5148;&#x770B;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x663E;&#x7136;<script type="math/tex; ">1 = 2 z'^2</script>&#x5BF9;&#x5E94;&#x4E24;&#x4E2A;&#x5E73;&#x884C;&#x7684;&#x5E73;&#x9762;<script type="math/tex; ">z' = \pm 1 / \sqrt{2}</script>&#xFF0C;&#x6838;&#x8303;&#x6570;&#x7403;&#x8FB9;&#x754C;&#x5728;&#x8FD9;&#x4E24;&#x4E2A;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x8FB9;&#x754C;&#x4E3A;
+\begin{align*}
+    z&apos;^2 - x&apos;^2 = 2 y^2 \Longrightarrow 2 x&apos;^2 + 4 y^2 = 1
+\end{align*}
+&#x662F;&#x4E00;&#x4E2A;&#x957F;&#x8F74;&#x4E3A;<script type="math/tex; ">1 / \sqrt{2}</script>&#x3001;&#x77ED;&#x8F74;&#x4E3A;<script type="math/tex; ">1/2</script>&#x7684;&#x692D;&#x5706;&#x3002;&#x518D;&#x770B;&#x7B2C;&#x4E8C;&#x884C;&#xFF0C;&#x6CE8;&#x610F;
+\begin{align*}
+    z&apos;^2 &lt; x&apos;^2 + 2 y^2 = \frac{1}{2} \Longrightarrow - \frac{1}{\sqrt{2}} &lt; z &lt; \frac{1}{\sqrt{2}}
+\end{align*}
+&#x5373;&#x4E3A;&#x4E24;&#x4E2A;&#x5E73;&#x884C;&#x7684;&#x5E73;&#x9762;<script type="math/tex; ">z' = \pm 1 / \sqrt{2}</script>&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x692D;&#x5706;<script type="math/tex; ">2 x'^2 + 4 y^2 = 1</script>&#x3002;</p>
+<p>&#x3000;&#x3000;&#x7EFC;&#x4E0A;&#xFF0C;<script type="math/tex; ">\Sbb_2</script>&#x7684;&#x6838;&#x8303;&#x6570;&#x7403;&#x5728;<script type="math/tex; ">x'yz'</script>&#x5750;&#x6807;&#x7CFB;&#x4E0B;&#x4E3A;&#x4E00;&#x4E2A;&#x4EE5;<script type="math/tex; ">z</script>&#x8F74;&#x4E3A;&#x4E2D;&#x5FC3;&#x7684;&#x692D;&#x5706;&#x67F1;
+\begin{align*}
+    2 x&apos;^2 + 4 y^2 \le 1, \quad - \frac{1}{\sqrt{2}} \le z \le \frac{1}{\sqrt{2}}
+\end{align*}
+&#x5C06;&#x5176;&#x6CBF;<script type="math/tex; ">xoz</script>&#x5E73;&#x9762;&#x987A;&#x65F6;&#x9488;&#x65CB;&#x8F6C;45&#x5EA6;&#xFF0C;&#x5373;&#x4E3A;&#x5176;&#x5728;&#x539F;<script type="math/tex; ">xyz</script>&#x5750;&#x6807;&#x7CFB;&#x4E0B;&#x7684;&#x6837;&#x5B50;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-01-14 01:34:35
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="derivative.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 导数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"核范数球","level":"1.2.1.2","depth":3,"next":{"title":"逆","level":"1.2.2","depth":2,"ref":"","articles":[]},"previous":{"title":"导数","level":"1.2.1.1","depth":3,"path":"posts/matrix/derivative.md","ref":"posts/matrix/derivative.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax@git+https://github.com/CHN-beta/plugin-mathjax.git#update_cdn","splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"notes-math"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"mathjax":{"forceSVG":false,"version":"2.7.1"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Notes on Math","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"数学笔记"},"file":{"path":"posts/matrix/nuclear-norm-ball.md","mtime":"2021-01-13T17:34:35.440Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-13T18:32:56.246Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
