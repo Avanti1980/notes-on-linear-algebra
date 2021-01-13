@@ -1,4 +1,5 @@
-　　向量的$\ell\_p$范数球都很容易可视化，但是矩阵的就没那么容易了，不过$\Sbb\_2$的核范数球是可以的。设\begin{align\*}
+　　向量的$\ell_p$范数球都很容易可视化，但是矩阵的就没那么容易了，不过$\Sbb_2$的核范数球是可以的。设
+\begin{align\*}
     \Mv = \begin{bmatrix}
         x & y \\\\ y & z
     \end{bmatrix}, \quad \Mv^\top \Mv = \begin{bmatrix}
