@@ -3,6 +3,7 @@
 -   [简介](README.md)
 -   微积分
     -   [Wallis公式](posts/calculus/Wallis-formula.md)
+    -   [Gamma函数](posts/calculus/gamma.md)
 -   线性代数
     -   矩阵
         -   [导数](posts/matrix/derivative.md)
