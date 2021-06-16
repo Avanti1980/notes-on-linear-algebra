@@ -83,11 +83,11 @@
 \end{align\*}
 右边的无穷乘积式难以进一步处理，于是Wallis转而考虑更一般形式的曲线积分
 \begin{align\*}
-    A\_{p,q} = \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^q \diff x
+    A(p,q) = \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^q \diff x
 \end{align\*}
-单位圆方程是该式的一个特例，即$A_{\frac{1}{2},\frac{1}{2}} = \pi / 4$。易知
+单位圆方程是该式的一个特例，即$A ( \frac{1}{2}, \frac{1}{2} ) = \pi / 4$。易知
 \begin{align\*}
-    A\_{p,q} = \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^{q-1} \left( 1 - x^{\frac{1}{p}} \right) \diff x = A\_{p,q-1} - \int\_0^1 \class{blue}{\left( 1 - x^{\frac{1}{p}} \right)^{q-1} x^{\frac{1}{p}} \diff x}
+    A(p,q) = \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^{q-1} \left( 1 - x^{\frac{1}{p}} \right) \diff x = A(p,q-1) - \int\_0^1 \class{blue}{\left( 1 - x^{\frac{1}{p}} \right)^{q-1} x^{\frac{1}{p}} \diff x}
 \end{align\*}
 注意
 \begin{align\*}
@@ -95,37 +95,37 @@
 \end{align\*}
 故
 \begin{align\*}
-    A\_{p,q} & = A\_{p,q-1} + \int\_0^1 \frac{px}{q} \diff \left( 1 - x^{\frac{1}{p}} \right)^q = A\_{p,q-1} + \frac{px}{q} \left( 1 - x^{\frac{1}{p}} \right)^q |\_0^1 - \frac{p}{q} \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^q \diff x \\\\
-            & = A\_{p,q-1} - \frac{p}{q} A\_{p,q}                                                                                                                                                                                        \\\\
-            & \Longrightarrow \frac{A\_{p,q}}{A\_{p,q-1}} = \frac{q}{q+p}
+    A(p,q) & = A(p,q-1) + \int\_0^1 \frac{px}{q} \diff \left( 1 - x^{\frac{1}{p}} \right)^q = A(p,q-1) + \left. \frac{px}{q} \left( 1 - x^{\frac{1}{p}} \right)^q \right|\_0^1 - \frac{p}{q} \int\_0^1 \left( 1 - x^{\frac{1}{p}} \right)^q \diff x \\\\
+           & = A(p,q-1) - \frac{p}{q} A(p,q)                                                                                                                                                                                        \\\\
+           & \Longrightarrow \frac{A(p,q)}{A(p,q-1)} = \frac{q}{q+p}
 \end{align\*}
 又
 \begin{align\*}
-    A\_{p,1} = \int\_0^1 ( 1 - x^{\frac{1}{p}}) \diff x = 1 - \frac{p}{p+1} x^{\frac{p+1}{p}} |\_0^1 = \frac{1}{p+1}
+    A(p,1) = \int\_0^1 ( 1 - x^{\frac{1}{p}}) \diff x = 1 - \left. \frac{p}{p+1} x^{\frac{p+1}{p}} \right|\_0^1 = \frac{1}{p+1}
 \end{align\*}
 于是
 \begin{align} \label{eq: apq}
-    A\_{p,q} = \frac{q}{q+p} A\_{p,q-1} = \frac{q}{q+p} \cdot \frac{q-1}{q+p-1} \cdots \frac{2}{p+2} \cdot \frac{1}{p+1} = \class{blue}{\frac{p!q!}{(q+p)!}}
+    A(p,q) = \frac{q}{q+p} A(p,q-1) = \frac{q}{q+p} \cdot \frac{q-1}{q+p-1} \cdots \frac{2}{p+2} \cdot \frac{1}{p+1} = \class{blue}{\frac{p!q!}{(q+p)!}}
 \end{align}
 尽管上式是针对正整数$p$、$q$得到的，但Wallis猜测它们对分数$p$、$q$也成立，令$p = 1/2$、$q$为任意正整数可得
 \begin{align\*}
-    A\_{\frac{1}{2},q}             & = \frac{q}{q+\frac{1}{2}} \cdot \frac{q-1}{q-\frac{1}{2}} \cdots \frac{2}{\frac{1}{2}+2} \cdot \frac{1}{\frac{1}{2}+1} = \frac{2q}{2q+1} \cdot \frac{2q-2}{2q-1} \cdots \frac{4}{5} \cdot \frac{2}{3}                                                     \\\\
-    A\_{\frac{1}{2},q+\frac{1}{2}} & = \frac{q+\frac{1}{2}}{q+1} \cdot \frac{q-\frac{1}{2}}{q} \cdots \frac{\frac{5}{2}}{3} \cdot \frac{\frac{3}{2}}{2} A\_{\frac{1}{2},\frac{1}{2}} = \frac{2q+1}{2q+2} \cdot \frac{2q-1}{2q} \cdots \frac{5}{6} \cdot \frac{3}{4} A\_{\frac{1}{2},\frac{1}{2}}
+    A \left( \frac{1}{2}, q \right)             & = \frac{q}{q+\frac{1}{2}} \cdot \frac{q-1}{q-\frac{1}{2}} \cdots \frac{2}{\frac{1}{2}+2} \cdot \frac{1}{\frac{1}{2}+1} = \frac{2q}{2q+1} \cdot \frac{2q-2}{2q-1} \cdots \frac{4}{5} \cdot \frac{2}{3}                                                                                 \\\\
+    A \left( \frac{1}{2}, q+\frac{1}{2} \right) & = \frac{q+\frac{1}{2}}{q+1} \cdot \frac{q-\frac{1}{2}}{q} \cdots \frac{\frac{5}{2}}{3} \cdot \frac{\frac{3}{2}}{2} A \left( \frac{1}{2}, \frac{1}{2} \right) = \frac{2q+1}{2q+2} \cdot \frac{2q-1}{2q} \cdots \frac{5}{6} \cdot \frac{3}{4} A \left( \frac{1}{2}, \frac{1}{2} \right)
 \end{align\*}
-由于$1 - x^{\frac{1}{p}} \in [0,1]$，因此$A_{p,q}$是关于$q$的单调减函数，于是
+由于$1 - x^{\frac{1}{p}} \in [0,1]$，因此$A(p,q)$是关于$q$的单调减函数，于是
 \begin{align\*}
-    A\_{\frac{1}{2},q-\frac{1}{2}} \ge A\_{\frac{1}{2},q} \ge A\_{\frac{1}{2},q+\frac{1}{2}} = \frac{q+\frac{1}{2}}{q+1} A\_{\frac{1}{2},q-\frac{1}{2}}
+    A \left( \frac{1}{2}, q-\frac{1}{2} \right) \ge A \left( \frac{1}{2}, q \right) \ge A \left( \frac{1}{2}, q+\frac{1}{2} \right) = \frac{q+\frac{1}{2}}{q+1} A \left( \frac{1}{2}, q-\frac{1}{2} \right)
 \end{align\*}
-由夹逼定理知$\lim_{q \rightarrow \infty} A_{\frac{1}{2},q} = \lim_{q \rightarrow \infty} A_{\frac{1}{2},q+\frac{1}{2}}$，即
+由夹逼定理知$\lim_{q \rightarrow \infty} A ( \frac{1}{2}, q ) = \lim_{q \rightarrow \infty} A ( \frac{1}{2}, q+\frac{1}{2} )$，即
 \begin{align\*}
-    \lim\_{q \rightarrow \infty} \frac{2q}{2q+1} \cdot \frac{2q-2}{2q-1} \cdots \frac{4}{5} \cdot \frac{2}{3} = \lim\_{q \rightarrow \infty} \frac{2q+1}{2q+2} \cdot \frac{2q-1}{2q} \cdots \frac{5}{6} \cdot \frac{3}{4} A\_{\frac{1}{2},\frac{1}{2}}
+    \lim\_{q \rightarrow \infty} \frac{2q}{2q+1} \cdot \frac{2q-2}{2q-1} \cdots \frac{4}{5} \cdot \frac{2}{3} = \lim\_{q \rightarrow \infty} \frac{2q+1}{2q+2} \cdot \frac{2q-1}{2q} \cdots \frac{5}{6} \cdot \frac{3}{4} A \left( \frac{1}{2}, \frac{1}{2} \right)
 \end{align\*}
 整理可得
 \begin{align\*}
-    \frac{\pi}{4} = A\_{\frac{1}{2},\frac{1}{2}} = \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot \frac{6}{5} \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9}\cdots
+    \frac{\pi}{4} = A \left( \frac{1}{2}, \frac{1}{2} \right) = \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot \frac{6}{5} \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9}\cdots
 \end{align\*}
 
-　　Wallis对式(\ref{eq: apq})取分数$p$、$q$其实隐含假设了阶乘对分数也有定义，因此这个证明并不严格，但这为后来Euler研究阶乘的插值提供了线索。此外对式(\ref{eq: apq})令$p = q = 1/2$可得
+　　Wallis对式(\ref{eq: apq})取分数$p$、$q$其实<span class="blue">隐含假设了阶乘对分数也有定义</span>，因此这个证明并不严格，但这为后来Euler研究阶乘的插值提供了线索。此外对式(\ref{eq: apq})令$p = q = 1/2$可得
 \begin{align\*}
-    \frac{\pi}{4} = A\_{\frac{1}{2},\frac{1}{2}} = \left( \frac{1}{2} \right)! \left( \frac{1}{2} \right)! \Longrightarrow \left( \frac{1}{2} \right)! = \frac{\sqrt{\pi}}{2}
+    \frac{\pi}{4} = A \left( \frac{1}{2}, \frac{1}{2} \right) = \left( \frac{1}{2} \right)! \left( \frac{1}{2} \right)! \Longrightarrow \left( \frac{1}{2} \right)! = \frac{\sqrt{\pi}}{2}
 \end{align\*}
