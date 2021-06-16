@@ -247,7 +247,7 @@
 \begin{align\*}
     S(n\_1, n\_2) = \frac{\ln f(n\_2) - \ln f(n\_1)}{n\_2 - n\_1}
 \end{align\*}
-由定理知$S(n_1, n_2)$关于$n_1$、$n_2$均是单调增函数，于是对$\forall n \in (0,1]$有
+由附录中的定理1知$S(n_1, n_2)$关于$n_1$、$n_2$均是单调增函数，于是对$\forall n \in (0,1]$有
 \begin{align\*}
         & \qquad ~ S(m-1, m) \le S(m, m+n) \le S(m, m+1) \\\\
         & \Longleftrightarrow \frac{\ln f(m) - \ln f(m-1)}{1} \le \frac{\ln f(m+n) - \ln f(m)}{n} \le \frac{\ln f(m+1) - \ln f(m)}{1} \\\\

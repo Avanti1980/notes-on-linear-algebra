@@ -98,6 +98,7 @@ require(['gitbook'], function (gitbook) {
                 Vcal: '{\\mathcal V}',
                 Xcal: '{\\mathcal X}',
                 Ycal: '{\\mathcal Y}',
+                xhat: '{\\hat x}',
                 conv: '{\\mathrm {conv}}',
                 diff: '{\\mathrm {d}}',
                 diag: '{\\mathrm {diag}}',
