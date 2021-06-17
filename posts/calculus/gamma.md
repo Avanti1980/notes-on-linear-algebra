@@ -160,7 +160,7 @@
 
 ## $\Gamma$函数的性质
 
-　　本节证明Euler反射公式、Legendre倍元公式、Gauss乘法公式和$\Gamma$函数的唯一性。
+　　本节证明Euler反射公式、Legendre倍元公式、Gauss乘法公式和Bohr-Mollerup定理。
 
 #### Euler反射公式
 
@@ -233,9 +233,9 @@
                                                             & = (2 \pi)^\frac{n-1}{2} n^{\frac{1}{2}-nz} \Gamma (nz)
 \end{align\*}
 
-#### 唯一性
+#### Bohr-Mollerup定理
 
-　　阶乘的插值函数并不唯一，但<span class="blue">同时满足1) $f(1) = 1$；2) $f(n+1) = n f(n)$；3) $\ln f$是凸函数</span>这三个条件的只有$\Gamma$函数，这称之为Bohr-Mollerup定理。
+　　阶乘的插值函数并不唯一，但<span class="blue">同时满足1) $f(1) = 1$；2) $f(n+1) = n f(n)$；3) $\ln f$是凸函数</span> 这三个条件的只有$\Gamma$函数。
 
 　　设函数$f(n)$满足这三个条件，根据第2个条件可知对任意正整数$m$有
 \begin{align\*}
