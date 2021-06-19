@@ -17,6 +17,7 @@
     -   [区间](posts/measure/interval.md)
 -   概率
     -   [Beta分布和Dirichlet分布](posts/probability/beta-dirichlet-distribution.md)
+    -   [共轭先验](posts/probability/conjugate-prior.md)
 -   优化
     -   分析
         -   [极点的等价定义](posts/optimization/analysis/extreme-point.md)
