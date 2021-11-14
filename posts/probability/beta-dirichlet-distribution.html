@@ -1,0 +1,802 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Beta 分布和 Dirichlet 分布 · Notes on Math</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="conjugate-prior.html" />
+    
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    微积分
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../calculus/Wallis-formula.html">
+            
+                <a href="../calculus/Wallis-formula.html">
+            
+                    
+                    Wallis 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../calculus/gamma.html">
+            
+                <a href="../calculus/gamma.html">
+            
+                    
+                    Gamma 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    线性代数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../matrix/derivative.html">
+            
+                <a href="../matrix/derivative.html">
+            
+                    
+                    导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../matrix/Strassen.html">
+            
+                <a href="../matrix/Strassen.html">
+            
+                    
+                    乘法加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../matrix/TU-matrix.html">
+            
+                <a href="../matrix/TU-matrix.html">
+            
+                    
+                    全幺模矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../matrix/nuclear-norm-ball.html">
+            
+                <a href="../matrix/nuclear-norm-ball.html">
+            
+                    
+                    核范数球
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    行列式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../determinant/Cauchy-Binet.html">
+            
+                <a href="../determinant/Cauchy-Binet.html">
+            
+                    
+                    Cauchy-Binet 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测度论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../measure/set-algebra.html">
+            
+                <a href="../measure/set-algebra.html">
+            
+                    
+                    集合代数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../measure/set-ring-algebra-ring.html">
+            
+                <a href="../measure/set-ring-algebra-ring.html">
+            
+                    
+                    此环非彼环乎？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../measure/interval.html">
+            
+                <a href="../measure/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    概率
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="beta-dirichlet-distribution.html">
+            
+                <a href="beta-dirichlet-distribution.html">
+            
+                    
+                    Beta 分布和 Dirichlet 分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="conjugate-prior.html">
+            
+                <a href="conjugate-prior.html">
+            
+                    
+                    共轭先验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../optimization/analysis/extreme-point.html">
+            
+                <a href="../optimization/analysis/extreme-point.html">
+            
+                    
+                    极点的等价定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    对偶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../optimization/dual/LP-dual-interpretation.html">
+            
+                <a href="../optimization/dual/LP-dual-interpretation.html">
+            
+                    
+                    线性规划下的解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../optimization/dual/MCFC.html">
+            
+                <a href="../optimization/dual/MCFC.html">
+            
+                    
+                    匹配、覆盖、流、割
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Beta 分布和 Dirichlet 分布</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;Euler&#x5728;&#x7814;&#x7A76;&#x9636;&#x4E58;&#x63D2;&#x503C;&#x65F6;&#x5F15;&#x5165;&#x4E86;<script type="math/tex; ">B</script>&#x51FD;&#x6570;(&#x7B2C;&#x4E00;&#x578B;&#x79EF;&#x5206;)&#x548C;<script type="math/tex; ">\Gamma</script>&#x51FD;&#x6570;(&#x7B2C;&#x4E8C;&#x578B;&#x79EF;&#x5206;)&#xFF0C;&#x4E14;&#x5B83;&#x4EEC;&#x6709;&#x5173;&#x7CFB;&#xFF1A;
+\begin{align*}
+    B(m,n) = \int_0^1 x^{m-1} (1-x)^{n-1} \diff x = \frac{\Gamma(m) \Gamma(n)}{\Gamma(m+n)}
+\end{align*}
+&#x4E8E;&#x662F;&#x5B9A;&#x4E49;&#x51FD;&#x6570;<script type="math/tex; ">f_{m,n}: [0,1] \mapsto \Rbb</script>&#x5982;&#x4E0B;&#xFF1A;
+\begin{align*}
+    f_{m,n}(x) = \frac{x^{m-1} (1-x)^{n-1}}{B(m,n)} = \frac{\Gamma(m+n)}{\Gamma(m) \Gamma(n)} x^{m-1} (1-x)^{n-1}
+\end{align*}
+&#x6613;&#x77E5;&#x5176;&#x79EF;&#x5206;&#x4E3A;<script type="math/tex; ">1</script>&#xFF0C;&#x6545;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5206;&#x6BCD;&#x662F;<script type="math/tex; ">B</script>&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x4E3A;<span class="blue">&#x53C2;&#x6570;&#x4E3A;<script type="math/tex; ">m</script>&#x3001;<script type="math/tex; ">n</script>&#x7684;Beta&#x5206;&#x5E03;</span>&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;Beta&#x5206;&#x5E03;&#x7684;&#x6570;&#x5B57;&#x7279;&#x5F81;&#xFF0C;&#x6613;&#x77E5;&#x5176;<script type="math/tex; ">k</script>&#x9636;&#x77E9;&#x4E3A;
+\begin{align*}
+    \Ebb[x^k] &amp; = \int_0^1 x^k f_{m,n}(x) \diff x = \int_0^1 x^k \frac{x^{m-1} (1-x)^{n-1}}{B(m,n)} \diff x = \frac{B(m+k,n)}{B(m,n)} \int_0^1 \frac{x^{m+k-1} (1-x)^{n-1}}{B(m+k, n)} \diff x \\
+              &amp; = \frac{B(m+k, n)}{B(m,n)} = \frac{\Gamma(m+k) \Gamma(n)}{\Gamma(m+k+n)} / \frac{\Gamma(m) \Gamma(n)}{\Gamma(m+n)} = \frac{\Gamma(m+k) \Gamma(m+n)}{\Gamma(m+k+n) \Gamma(m)}
+\end{align*}
+&#x4E8E;&#x662F;
+\begin{align*}
+    \Ebb[x] = \frac{\Gamma(m+1) \Gamma(m+n)}{\Gamma(m+1+n) \Gamma(m)} = \frac{m}{m+n}, \quad \Ebb[x^2] = \frac{\Gamma(m+2) \Gamma(m+n)}{\Gamma(m+2+n) \Gamma(m)} = \frac{(m+1)m}{(m+n+1)(m+n)}
+\end{align*}
+&#x6545;&#x5176;&#x5747;&#x503C;&#x548C;&#x65B9;&#x5DEE;&#x5206;&#x522B;&#x4E3A;
+\begin{align*}
+    \Ebb[x] = \frac{m}{m+n}, \quad \Vbb[x] = \frac{(m+1)m}{(m+n+1)(m+n)} - \left(\frac{m}{m+n}\right)^2 = \frac{mn}{(m+n+1)(m+n)^2}
+\end{align*}</p>
+<p>&#x3000;&#x3000;<script type="math/tex; ">B</script>&#x51FD;&#x6570;&#x662F;&#x4E8C;&#x5143;&#x7684;&#xFF0C;&#x53EF;&#x5C06;&#x5176;&#x63A8;&#x5E7F;&#x6210;&#x5230;<script type="math/tex; ">k+1</script>&#x5143;&#xFF1A;
+\begin{align} \label{eq: multivariate beta function}
+    B(m_1, \ldots, m_{k+1}) = \int_0^1 x_1^{m_1-1} \int_0^{1-x_1} x_2^{m_2-1} \cdots  \int_0^{1-x_1 - \cdots - x_{k-1}} x_k^{m_k-1} (1 - x_1 - \cdots - x_k)^{m_{k+1}-1} \diff \xv
+\end{align}
+&#x6CE8;&#x610F;&#x5F0F;(\ref{eq: multivariate beta function})&#x662F;&#x4E00;&#x4E2A;<script type="math/tex; ">k</script>&#x91CD;&#x79EF;&#x5206;&#xFF0C;&#x8003;&#x5BDF;&#x6700;&#x91CC;&#x9762;&#x5173;&#x4E8E;<script type="math/tex; ">x_k</script>&#x7684;&#x79EF;&#x5206;&#xFF0C;&#x5373;
+\begin{align*}
+    E_k(m_k, m_{k+1}) = \int_0^{1-x_1 - \cdots - x_{k-1}} x_k^{m_k-1} (1 - x_1 - \cdots - x_k)^{m_{k+1}-1} \diff x_k = \int_0^t x_k^{m_k-1} (t - x_k)^{m_{k+1}-1} \diff x_k
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">t = 1-x_1 - \cdots - x_{k-1}</script>&#x3002;&#x7531;&#x5206;&#x90E8;&#x79EF;&#x5206;&#x6709;
+\begin{align*}
+    E_k(m_k, m_{k+1}) &amp; = \frac{1}{m_k} \int_0^t (t - x_k)^{m_{k+1}-1} \diff x_k^{m_k}                                                                                    \\
+                      &amp; = \left. \frac{1}{m_k} (t - x_k)^{m_{k+1}-1} x_k^{m_k} \right|_0^t + \frac{1}{m_k} \int_0^t x_k^{m_k} (m_{k+1}-1) (t - x_k)^{m_{k+1}-2} \diff x_k \\
+                      &amp; = \frac{m_{k+1}-1}{m_k} E_k(m_k+1, m_{k+1}-1)
+\end{align*}
+&#x4E8E;&#x662F;&#x9012;&#x63A8;&#x4E0B;&#x53BB;&#x6709;
+\begin{align*}
+    E_k(m_k, m_{k+1}) &amp; = \frac{m_{k+1}-1}{m_k} \cdot \frac{m_{k+1}-2}{m_k+1} E_k(m_k+2, m_{k+1}-2)          \\
+                      &amp; = \cdots                                                                             \\
+                      &amp; = \frac{m_{k+1}-1}{m_k} \cdots \frac{1}{m_k + m_{k+1} - 2} E_k(m_k + m_{k+1} - 1, 1)
+\end{align*}
+&#x53C8;
+\begin{align*}
+    E_k(m_k + m_{k+1} - 1, 1) = \int_0^t x_k^{m_k + m_{k+1} - 2} \diff x_k = \left. \frac{x_k^{m_k + m_{k+1} - 1}}{m_k + m_{k+1} - 1} \right|_0^t = \frac{t^{m_k + m_{k+1} - 1}}{m_k + m_{k+1} - 1}
+\end{align*}
+&#x4E8E;&#x662F;
+\begin{align*}
+    E_k(m_k, m_{k+1}) = \frac{\Gamma(m_{k+1}) \Gamma(m_k)}{\Gamma(m_{k+1} + m_k)} (1-x_1 - \cdots - x_{k-1})^{m_k + m_{k+1} - 1}
+\end{align*}
+&#x5C06;&#x5176;&#x56DE;&#x4EE3;&#x5165;&#x5F0F;(\ref{eq: multivariate beta function})&#xFF0C;&#x63A5;&#x7740;&#x8003;&#x5BDF;&#x6700;&#x91CC;&#x9762;&#x5173;&#x4E8E;<script type="math/tex; ">x_{k-1}</script>&#x7684;&#x79EF;&#x5206;
+\begin{align*}
+    E_{k-1}(m_{k-1}, m_k + m_{k+1}) = \frac{\Gamma(m_{k+1}) \Gamma(m_k)}{\Gamma(m_{k+1} + m_k)} \int_0^t x_{k-1}^{m_{k-1}-1}  (t - x_{k-1})^{m_k + m_{k+1} - 1} \diff x_{k-1}
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">t = 1-x_1 - \cdots - x_{k-2}</script>&#x3002;&#x7531;&#x5206;&#x90E8;&#x79EF;&#x5206;&#x6709;
+\begin{align*}
+    E_{k-1}(m_{k-1}, m_k + m_{k+1}) &amp; = \frac{\Gamma(m_{k+1}) \Gamma(m_k)}{\Gamma(m_{k+1} + m_k)} \cdot \frac{\Gamma(m_{k+1} + m_k) \Gamma(m_{k-1})}{\Gamma(m_{k+1} + m_k + m_{k-1})} t^{m_{k+1} + m_k + m_{k-1} - 1} \\
+                                    &amp; = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \Gamma(m_{k-1})}{\Gamma(m_{k+1} + m_k + m_{k-1})} (1-x_1 - \cdots - x_{k-2})^{m_{k+1} + m_k + m_{k-1} - 1}
+\end{align*}
+&#x4E0D;&#x65AD;&#x91CD;&#x590D;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53EF;&#x77E5;
+\begin{align} \label{eq: E2}
+    E_2(m_2, m_{k+1} + m_k + \cdots + m_3) = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_2)}{\Gamma(m_{k+1} + m_k + \cdots + m_2)} (1-x_1)^{m_{k+1} + m_k + \cdots + m_2 - 1}
+\end{align}
+&#x4E8E;&#x662F;&#x6700;&#x7EC8;&#x5BF9;<script type="math/tex; ">x_1</script>&#x79EF;&#x5206;&#x53EF;&#x5F97;
+\begin{align*}
+    B(m_1, \cdots, m_{k+1}) &amp; = \int_0^1 x_1^{m_1-1} \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_2)}{\Gamma(m_{k+1} + m_k + \cdots + m_2)} (1-x_1)^{m_{k+1} + m_k + \cdots + m_2 - 1} \diff x_1                                                                \\
+                            &amp; = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_2)}{\Gamma(m_{k+1} + m_k + \cdots + m_2)} \cdot \frac{\Gamma(m_{k+1} + m_k + \cdots + m_2) \Gamma(m_1)}{\Gamma(m_{k+1} + m_k + \cdots + m_1)} 1^{m_{k+1} + m_k + \cdots + m_1 - 1} \\
+                            &amp; = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_1)}{\Gamma(m_{k+1} + m_k + \cdots + m_1)}
+\end{align*}
+&#x8BB0;<script type="math/tex; ">\mv = [m_1; \ldots; m_{k+1}]</script>&#xFF0C;<script type="math/tex; ">\xv = [x_1; \ldots; x_{k+1}]</script>&#xFF0C;&#x5B9A;&#x4E49;&#x51FD;&#x6570;<script type="math/tex; ">f_{\mv}: \Delta_{k+1} \mapsto \Rbb</script>&#x5982;&#x4E0B;&#xFF1A;
+\begin{align*}
+    f_{\mv} (\xv) = \frac{\Gamma(m_{k+1} + m_k + \cdots + m_1)}{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_1)} \prod_{i=1}^{k+1} x_i^{m_i - 1}
+\end{align*}
+&#x7531;&#x4E0A;&#x9762;&#x7684;&#x63A8;&#x5BFC;&#x53EF;&#x77E5;<script type="math/tex; ">f_{\mv} (\xv)</script>&#x7684;<script type="math/tex; ">k</script>&#x91CD;&#x79EF;&#x5206;&#x4E3A;<script type="math/tex; ">1</script>&#xFF0C;&#x6545;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x51FD;&#x6570;&#xFF0C;&#x4EEC;&#x79F0;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x4E3A;<span class="blue">&#x53C2;&#x6570;&#x4E3A;<script type="math/tex; ">\mv</script>&#x7684;Dirichlet&#x5206;&#x5E03;</span>&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;Dirichlet&#x5206;&#x5E03;&#x7684;&#x6570;&#x5B57;&#x7279;&#x5F81;&#xFF0C;&#x6613;&#x77E5;
+\begin{align*}
+     &amp; x_j^n f_{\mv} (\xv) = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1}) \cdots \Gamma(m_1)} x_j^n \prod_{i=1}^{k+1} x_i^{m_i - 1}                                                                                                                                                                 \\
+     &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1} + \cdots + m_j + n + \cdots + m_1)} \cdot \frac{\Gamma(m_j + n)}{\Gamma(m_j)} \cdot \frac{\Gamma(m_{k+1} + \cdots + m_j + n + \cdots + m_1)}{\Gamma(m_{k+1}) \cdots \Gamma(m_j + n) \cdots \Gamma(m_1)}  x_j^n \prod_{i=1}^{k+1} x_i^{m_i - 1}
+\end{align*}
+&#x4E8E;&#x662F;
+\begin{align*}
+    \Ebb[x_j]   &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1} + \cdots + m_j + 1 + \cdots + m_1)} \frac{\Gamma(m_j + 1)}{\Gamma(m_j)} = \frac{m_j}{m_{k+1} + \cdots + m_1}                                      \\
+    \Ebb[x_j^2] &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1} + \cdots + m_j + 2 + \cdots + m_1)} \frac{\Gamma(m_j + 2)}{\Gamma(m_j)} = \frac{(m_j+1)m_j}{(m_{k+1} + \cdots + m_1 + 1)(m_{k+1} + \cdots + m_1)}
+\end{align*}
+&#x6545;&#x5176;&#x5747;&#x503C;&#x548C;&#x65B9;&#x5DEE;&#x5206;&#x522B;&#x4E3A;
+\begin{align*}
+    \Ebb[x_j] &amp; = \frac{m_j}{m_{k+1} + \cdots + m_1}                                                                                          \\
+    \Vbb[x_j] &amp; = \frac{(m_j+1)m_j}{(m_{k+1} + \cdots + m_1 + 1)(m_{k+1} + \cdots + m_1)} - \left(\frac{m_j}{m_{k+1} + \cdots + m_1}\right)^2 \\
+              &amp; = \frac{m_j (m_{k+1} + \cdots + m_1 - m_j)}{(m_{k+1} + \cdots + m_1+1)(m_{k+1} + \cdots + m_1)^2}
+\end{align*}
+&#x53C8;
+\begin{align*}
+    x_p x_q f_{\mv} (\xv) &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1}) \cdots \Gamma(m_1)} x_p x_q \prod_{i=1}^{k+1} x_i^{m_i - 1}                                                                                                       \\
+                          &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1} + \cdots + m_p + 1 + \cdots + m_q + 1 + \cdots + m_1)} \cdot \frac{\Gamma(m_p + 1)}{\Gamma(m_p)} \cdot \frac{\Gamma(m_q + 1)}{\Gamma(m_q)}                         \\
+                          &amp; \qquad \qquad \cdot \frac{\Gamma(m_{k+1} + \cdots + m_p + 1 + \cdots + m_q + 1 + \cdots + m_1)}{\Gamma(m_{k+1}) \cdots \Gamma(m_p + 1) \cdots \Gamma(m_q + 1) \cdots \Gamma(m_1)} x_p x_q \prod_{i=1}^{k+1} x_i^{m_i - 1}
+\end{align*}
+&#x4E8E;&#x662F;
+\begin{align*}
+    \Ebb[x_p x_q] &amp; = \frac{\Gamma(m_{k+1} + \cdots + m_1)}{\Gamma(m_{k+1} + \cdots + m_p + 1 + \cdots + m_q + 1 + \cdots + m_1)} \cdot \frac{\Gamma(m_p + 1)}{\Gamma(m_p)} \cdot \frac{\Gamma(m_q + 1)}{\Gamma(m_q)} \\
+                  &amp; = \frac{m_p m_q}{(m_{k+1} + \cdots + m_1 + 1)(m_{k+1} + \cdots + m_1)}
+\end{align*}
+&#x6545;&#x534F;&#x65B9;&#x5DEE;&#x4E3A;
+\begin{align*}
+    \cov(x_p, x_q) &amp; = \Ebb[x_p x_q] - \Ebb[x_p] \Ebb[x_q]                                                                                                                \\
+                   &amp; = \frac{m_p m_q}{(m_{k+1} + \cdots + m_1 + 1)(m_{k+1} + \cdots + m_1)} - \frac{m_p}{m_{k+1} + \cdots + m_1} \cdot \frac{m_q}{m_{k+1} + \cdots + m_1} \\
+                   &amp; = \frac{-m_p m_q}{(m_{k+1} + \cdots + m_1+1)(m_{k+1} + \cdots + m_1)^2}
+\end{align*}</p>
+<p>&#x3000;&#x3000;&#x7531;&#x5F0F;(\ref{eq: E2})&#x77E5;
+\begin{align*}
+    \pr(x_1 = t) &amp; = t^{m_1 - 1} \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_2)}{\Gamma(m_{k+1} + m_k + \cdots + m_2)} (1-t)^{m_{k+1} + m_k + \cdots + m_2 - 1}                         \\
+                 &amp; = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_1)}{\Gamma(m_1) \Gamma(m_{k+1} + m_k + \cdots + m_1 - m_1)} t^{m_1 - 1} (1-t)^{m_{k+1} + m_k + \cdots + m_1 - m_1 - 1}
+\end{align*}
+&#x7531;&#x5BF9;&#x79F0;&#x6027;&#x53EF;&#x77E5;
+\begin{align*}
+    \pr(x_i = t) = \frac{\Gamma(m_{k+1}) \Gamma(m_k) \cdots \Gamma(m_1)}{\Gamma(m_i) \Gamma(m_{k+1} + m_k + \cdots + m_1 - m_i)} t^{m_i - 1} (1-t)^{m_{k+1} + m_k + \cdots + m_1 - m_i - 1}
+\end{align*}
+&#x8FD9;&#x610F;&#x5473;&#x7740;Dirichlet&#x5206;&#x5E03;&#x7684;&#x53D8;&#x91CF;<script type="math/tex; ">x_i</script>&#x7684;&#x8FB9;&#x9645;&#x5206;&#x5E03;&#x662F;&#x53C2;&#x6570;&#x4E3A;<script type="math/tex; ">m_i</script>&#x3001;<script type="math/tex; ">m_{k+1} + m_k + \cdots + m_1 - m_i</script>&#x7684;Beta&#x5206;&#x5E03;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-19 10:00:22
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="conjugate-prior.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 共轭先验">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Beta 分布和 Dirichlet 分布","level":"1.5.1","depth":2,"next":{"title":"共轭先验","level":"1.5.2","depth":2,"path":"posts/probability/conjugate-prior.md","ref":"posts/probability/conjugate-prior.md","articles":[]},"previous":{"title":"概率","level":"1.5","depth":1,"ref":"","articles":[{"title":"Beta 分布和 Dirichlet 分布","level":"1.5.1","depth":2,"path":"posts/probability/beta-dirichlet-distribution.md","ref":"posts/probability/beta-dirichlet-distribution.md","articles":[]},{"title":"共轭先验","level":"1.5.2","depth":2,"path":"posts/probability/conjugate-prior.md","ref":"posts/probability/conjugate-prior.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax@git+https://github.com/CHN-beta/plugin-mathjax.git#update_cdn","splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"notes-math"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"mathjax":{"forceSVG":false,"version":"2.7.1"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Notes on Math","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"数学笔记"},"file":{"path":"posts/probability/beta-dirichlet-distribution.md","mtime":"2021-06-19T02:00:22.219Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-14T08:03:33.998Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
