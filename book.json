@@ -37,8 +37,8 @@
     ],
     "pluginsConfig": {
         "donate": {
-            "wechat": "https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/wx.jpg",
-            "alipay": "https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/zfb.jpg",
+            "wechat": "https://gitee.com/avanti1980/notes-on-math/raw/master/img/wx.jpg",
+            "alipay": "https://gitee.com/avanti1980/notes-on-math/raw/master/img/zfb.jpg",
             "title": "",
             "button": "赏",
             "alipayText": "支付宝",
