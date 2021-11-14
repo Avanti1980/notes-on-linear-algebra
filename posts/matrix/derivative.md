@@ -1,4 +1,4 @@
-　　标量、向量、矩阵间的求导共有9种可能，其中<span class="green">$\partial \text{scalar</span> / \partial \text{scalar}$}就是我们熟悉的单变量微积分，<span class="red">$\partial \text{vector</span> / \partial \text{matrix}$}、<span class="red">$\partial \text{matrix</span> / \partial \text{vector}$}、<span class="red">$\partial \text{matrix</span> / \partial \text{matrix}$}会涉及高阶张量，处理更为麻烦，因此本文只考虑剩下的5种情形。
+　　标量、向量、矩阵间的求导共有9种可能，其中$\partial \text{scalar} / \partial \text{scalar}$就是我们熟悉的单变量微积分，$\partial \text{vector} / \partial \text{matrix}$、$\partial \text{matrix} / \partial \text{vector}$、$\partial \text{matrix} / \partial \text{matrix}$会涉及高阶张量，处理更为麻烦，因此本文只考虑剩下的5种情形。
 
 　　设$\uv \in \Rbb^l$，$\Uv \in \Rbb^{m \times n}$，则向量、矩阵对标量求导的定义为
 \begin{align\*}
