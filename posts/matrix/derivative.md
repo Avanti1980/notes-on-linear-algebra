@@ -100,7 +100,7 @@
 这是因为
 \begin{align\*}
     \left[ \frac{\partial \gv(\uv)}{\partial \xv} \right]\_{ij} & = \frac{\partial [\gv(\uv)]\_i}{\partial x\_j} = \sum\_{k \in [m]} \frac{\partial [\gv(\uv)]\_i}{\partial u\_k} \frac{\partial u\_k}{\partial x\_j} = \frac{\partial [\gv(\uv)]\_i}{\partial \uv} \frac{\partial \uv}{\partial x\_j} \\\\
-                                                   & = \left[ \frac{\partial \gv(\uv)}{\partial \uv} \right]\_{i,:} \left[ \frac{\partial \uv}{\partial \xv} \right]\_{:,j} = \left[ \frac{\partial \gv(\uv)}{\partial \uv} \frac{\partial \uv}{\partial \xv} \right]\_{i,j}
+    & = \left[ \frac{\partial \gv(\uv)}{\partial \uv} \right]\_{i,:} \left[ \frac{\partial \uv}{\partial \xv} \right]\_{:,j} = \left[ \frac{\partial \gv(\uv)}{\partial \uv} \frac{\partial \uv}{\partial \xv} \right]\_{i,j}
 \end{align\*}
 注意若$n = m = l = 1$，就退化成了单变量的链式法则。
 - 自变量是矩阵：设$u = u(\Xv)$，$g: \Rbb \mapsto \Rbb$，则
@@ -174,14 +174,14 @@
 - 更一般的有
 \begin{align\*}
     \frac{\partial [(\Av \xv + \bv)^\top \Cv (\Dv \xv + \ev)]}{\partial \xv} & = \frac{\partial (\xv^\top \Av^\top \Cv \Dv \xv + \bv^\top \Cv \Dv \xv + \xv^\top \Av^\top \Cv \ev + \bv^\top \ev)}{\partial \xv} \\\\
-                                                                 & = \xv^\top (\Av^\top \Cv \Dv + \Dv^\top \Cv^\top \Av) + \bv^\top \Cv \Dv + \ev^\top \Cv^\top \Av                                  \\\\
-                                                                 & = (\Dv \xv + \ev)^\top \Cv^\top \Av + (\Av \xv + \bv)^\top \Cv \Dv
+    & = \xv^\top (\Av^\top \Cv \Dv + \Dv^\top \Cv^\top \Av) + \bv^\top \Cv \Dv + \ev^\top \Cv^\top \Av                                  \\\\
+    & = (\Dv \xv + \ev)^\top \Cv^\top \Av + (\Av \xv + \bv)^\top \Cv \Dv
 \end{align\*}
 
 　　范数也是标量，若$\av$与$\xv$无关，则
 \begin{align} \label{eq: norm}
     \left[ \frac{\partial \\| \xv - \av \\|}{\partial \xv} \right]\_i & = \frac{\partial \\| \xv - \av \\|}{\partial x\_i} = \frac{\partial \sqrt{\sum\_j (x\_j - a\_j)^2}}{\partial x\_i} = \frac{1}{2} \frac{2 (x\_i - a\_i)}{\sqrt{\sum\_j (x\_j - a\_j)^2}} = \frac{x\_i - a\_i}{\\| \xv - \av \\|} \\\\
-                                                                   & \Longrightarrow \class{blue}{\frac{\partial \\| \xv - \av \\|}{\partial \xv} = \frac{(\xv - \av)^\top}{\\| \xv - \av \\|}} \nonumber
+    & \Longrightarrow \class{blue}{\frac{\partial \\| \xv - \av \\|}{\partial \xv} = \frac{(\xv - \av)^\top}{\\| \xv - \av \\|}} \nonumber
 \end{align}
 
 
@@ -237,13 +237,13 @@
 由此可知
 \begin{align\*}
     \class{blue}{\frac{\partial [\Xv^{-1}]\_{kl}}{\partial x\_{ij}}} & = \tr \left( \frac{\partial [\Xv^{-1}]\_{kl}}{\partial \Xv^{-1}} \frac{\partial \Xv^{-1}}{\partial x\_{ij}} \right) = - \tr \left( \Ev\_{lk} \Xv^{-1} \frac{\partial \Xv}{\partial x\_{ij}} \Xv^{-1} \right) = - \tr ( \Xv^{-1} \Ev\_{lk} \Xv^{-1} \Ev\_{ij} ) \\\\
-                                                            & = - [\Xv^{-1} \Ev\_{lk} \Xv^{-1}]\_{ji} = - \sum\_p \sum\_q [\Xv^{-1}]\_{jp} [\Ev\_{lk}]\_{pq} [\Xv^{-1}]\_{qi} = \class{blue}{- [\Xv^{-1}]\_{jl} [\Xv^{-1}]\_{ki}}
+    & = - [\Xv^{-1} \Ev\_{lk} \Xv^{-1}]\_{ji} = - \sum\_p \sum\_q [\Xv^{-1}]\_{jp} [\Ev\_{lk}]\_{pq} [\Xv^{-1}]\_{qi} = \class{blue}{- [\Xv^{-1}]\_{jl} [\Xv^{-1}]\_{ki}}
 \end{align\*}
 结合式(\ref{eq: product})还可得海森矩阵
 \begin{align\*}
     \class{blue}{\frac{\partial^2 \Uv^{-1}}{\partial x \partial y}} & = \frac{\partial}{\partial y} \left( - \Uv^{-1} \frac{\partial \Uv}{\partial x} \Uv^{-1} \right) = - \frac{\partial \Uv^{-1}}{\partial y} \frac{\partial \Uv}{\partial x} \Uv^{-1} - \Uv^{-1} \frac{\partial^2 \Uv}{\partial x \partial y} \Uv^{-1} - \Uv^{-1} \frac{\partial \Uv}{\partial x} \frac{\partial \Uv^{-1}}{\partial y} \\\\
-                                                             & = \Uv^{-1} \frac{\partial \Uv}{\partial y} \Uv^{-1} \frac{\partial \Uv}{\partial x} \Uv^{-1} - \Uv^{-1} \frac{\partial^2 \Uv}{\partial x \partial y} \Uv^{-1} + \Uv^{-1} \frac{\partial \Uv}{\partial x} \Uv^{-1} \frac{\partial \Uv}{\partial y} \Uv^{-1}                                                                          \\\\
-                                                             & = \class{blue}{\Uv^{-1} \left( \frac{\partial \Uv}{\partial y} \Uv^{-1} \frac{\partial \Uv}{\partial x} - \frac{\partial^2 \Uv}{\partial x \partial y} + \frac{\partial \Uv}{\partial x} \Uv^{-1} \frac{\partial \Uv}{\partial y} \right) \Uv^{-1}}
+    & = \Uv^{-1} \frac{\partial \Uv}{\partial y} \Uv^{-1} \frac{\partial \Uv}{\partial x} \Uv^{-1} - \Uv^{-1} \frac{\partial^2 \Uv}{\partial x \partial y} \Uv^{-1} + \Uv^{-1} \frac{\partial \Uv}{\partial x} \Uv^{-1} \frac{\partial \Uv}{\partial y} \Uv^{-1}                                                                          \\\\
+    & = \class{blue}{\Uv^{-1} \left( \frac{\partial \Uv}{\partial y} \Uv^{-1} \frac{\partial \Uv}{\partial x} - \frac{\partial^2 \Uv}{\partial x \partial y} + \frac{\partial \Uv}{\partial x} \Uv^{-1} \frac{\partial \Uv}{\partial y} \right) \Uv^{-1}}
 \end{align\*}
 
 　　矩阵除了常规的乘积外，还有克罗内克积和哈达玛积。设$\Uv \in \Rbb^{m \times n}$，$\Vv \in \Rbb^{p \times q}$，则
@@ -303,8 +303,8 @@
 易知有
 \begin{align\*}
     \class{blue}{\frac{\partial g(x \Av)}{\partial x}} & = a\_1 \Av + 2 a\_2 x \Av^2 + 3 a\_3 x^2 \Av^3 + \cdots                             \\\\
-                                                & = \Av (a\_1 \Iv + 2 a\_2 x \Av + 3 a\_3 x^2 \Av^2 + \cdots) = \class{blue}{\Av g' (x \Av)} \\\\
-                                                & = (a\_1 \Iv + 2 a\_2 x \Av + 3 a\_3 x^2 \Av^2 + \cdots) \Av = \class{blue}{g' (x \Av) \Av}
+    & = \Av (a\_1 \Iv + 2 a\_2 x \Av + 3 a\_3 x^2 \Av^2 + \cdots) = \class{blue}{\Av g' (x \Av)} \\\\
+    & = (a\_1 \Iv + 2 a\_2 x \Av + 3 a\_3 x^2 \Av^2 + \cdots) \Av = \class{blue}{g' (x \Av) \Av}
 \end{align\*}
 对于$e^x$、$\ln x$、$\sin x$、$\cos x$，上式依然适用，例如
 \begin{align\*}
@@ -324,7 +324,7 @@
 对于乘积有
 \begin{align\*}
     \left[ \frac{\partial \tr(\Uv \Vv)}{\partial \Xv} \right]\_{ij} & = \class{blue}{\frac{\partial \tr(\Uv \Vv)}{\partial x\_{ji}}} = \frac{\partial (\sum\_p \sum\_q u\_{pq} v\_{qp})}{\partial x\_{ji}} = \sum\_p \sum\_q \left( \frac{\partial u\_{pq}}{\partial x\_{ji}} v\_{qp} + u\_{pq} \frac{\partial v\_{qp}}{\partial x\_{ji}} \right) \\\\
-                                                                   & = \class{blue}{\tr \left( \frac{\partial \Uv}{\partial x\_{ji}} \Vv \right) + \tr \left( \Uv \frac{\partial \Vv}{\partial x\_{ji}} \right)} = \tr \left( \frac{\partial (\Uv \Vv)}{\partial x\_{ji}} \right)
+    & = \class{blue}{\tr \left( \frac{\partial \Uv}{\partial x\_{ji}} \Vv \right) + \tr \left( \Uv \frac{\partial \Vv}{\partial x\_{ji}} \right)} = \tr \left( \frac{\partial (\Uv \Vv)}{\partial x\_{ji}} \right)
 \end{align\*}
 由此可知<span class="blue">迹和求导的顺序可以交换</span>。特别的，
 - 取$\Uv = \Bv \Av$与$\Xv$无关，$\Vv = \Xv$，则
@@ -338,8 +338,8 @@
 - 取$\Uv = \Av$与$\Xv$无关，$\Vv = \Xv \Xv^\top$，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Av \Xv \Xv^\top)}{\partial \Xv} \right]\_{ij} & = \tr \left( \Av \frac{\partial \Xv \Xv^\top}{\partial x\_{ji}} \right) = \tr \left( \Av \frac{\partial \Xv}{\partial x\_{ji}} \Xv^\top \right) + \tr \left( \Av \Xv \frac{\partial \Xv^\top}{\partial x\_{ji}} \right) \\\\
-                                                                & = \tr(\Av \Ev\_{ji} \Xv^\top) + \tr(\Av \Xv \Ev\_{ij})                                                                                                                                                                 \\\\
-                                                                & = [\Xv^\top \Av]\_{ij} + [\Av \Xv]\_{ji}
+    & = \tr(\Av \Ev\_{ji} \Xv^\top) + \tr(\Av \Xv \Ev\_{ij})                                                                                                                                                                 \\\\
+    & = [\Xv^\top \Av]\_{ij} + [\Av \Xv]\_{ji}
 \end{align\*}
 从而
 \begin{align\*}
@@ -348,8 +348,8 @@
 - 取$\Uv = \Av$与$\Xv$无关，$\Vv = \Xv^\top \Xv$，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Av \Xv^\top \Xv)}{\partial \Xv} \right]\_{ij} & = \tr \left( \Av \frac{\partial \Xv^\top \Xv}{\partial x\_{ji}} \right) = \tr \left( \Av \frac{\partial \Xv^\top}{\partial x\_{ji}} \Xv \right) + \tr \left( \Av \Xv^\top \frac{\partial \Xv}{\partial x\_{ji}} \right) \\\\
-                                                                & = \tr(\Av \Ev\_{ij} \Xv) + \tr(\Av \Xv^\top \Ev\_{ji})                                                                                                                                                                 \\\\
-                                                                & = [\Xv \Av]\_{ji} + [\Av \Xv^\top]\_{ij}
+    & = \tr(\Av \Ev\_{ij} \Xv) + \tr(\Av \Xv^\top \Ev\_{ji})                                                                                                                                                                 \\\\
+    & = [\Xv \Av]\_{ji} + [\Av \Xv^\top]\_{ij}
 \end{align\*}
 从而
 \begin{align\*}
@@ -358,34 +358,34 @@
 - 取$\Uv = \Bv \Av$与$\Xv$无关，$\Vv = \Xv^{-1}$，结合式(\ref{eq: inverse})可得
 \begin{align\*}
     \left[ \frac{\partial \tr(\Bv \Av \Xv^{-1})}{\partial \Xv} \right]\_{ij} & = \tr \left( \Bv \Av \frac{\partial \Xv^{-1}}{\partial x\_{ji}} \right) = \tr \left( - \Bv \Av \Xv^{-1} \frac{\partial \Xv}{\partial x\_{ji}} \Xv^{-1} \right) \\\\
-                                                                & = - \tr \left( \Xv^{-1} \Bv \Av \Xv^{-1} \Ev\_{ji} \right) = - [\Xv^{-1} \Bv \Av \Xv^{-1}]\_{ij}                                                               \\\\
-                                                                & \Longrightarrow \frac{\partial \tr(\Bv \Av \Xv^{-1})}{\partial \Xv} = \frac{\partial \tr(\Av \Xv^{-1} \Bv)}{\partial \Xv} = - \Xv^{-1} \Bv \Av \Xv^{-1}
+    & = - \tr \left( \Xv^{-1} \Bv \Av \Xv^{-1} \Ev\_{ji} \right) = - [\Xv^{-1} \Bv \Av \Xv^{-1}]\_{ij}                                                               \\\\
+    & \Longrightarrow \frac{\partial \tr(\Bv \Av \Xv^{-1})}{\partial \Xv} = \frac{\partial \tr(\Av \Xv^{-1} \Bv)}{\partial \Xv} = - \Xv^{-1} \Bv \Av \Xv^{-1}
 \end{align\*}
 - 取$\Uv = \Iv$，$\Vv = (\Xv + \Av)^{-1}$，结合式(\ref{eq: inverse})可得
 \begin{align\*}
     \left[ \frac{\partial \tr(\Xv + \Av)^{-1}}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial (\Xv + \Av)^{-1}}{\partial x\_{ji}} \right) = - \tr \left( (\Xv + \Av)^{-1} \frac{\partial (\Xv + \Av)}{\partial x\_{ji}} (\Xv + \Av)^{-1} \right) \\\\
-                                                              & = - \tr \left( (\Xv + \Av)^{-1} (\Xv + \Av)^{-1} \Ev\_{ji}  \right) = - [(\Xv + \Av)^{-1} (\Xv + \Av)^{-1}]\_{ij}                                                              \\\\
-                                                              & \Longrightarrow \frac{\partial \tr(\Xv + \Av)^{-1}}{\partial \Xv} = - (\Xv + \Av)^{-1} (\Xv + \Av)^{-1}
+    & = - \tr \left( (\Xv + \Av)^{-1} (\Xv + \Av)^{-1} \Ev\_{ji}  \right) = - [(\Xv + \Av)^{-1} (\Xv + \Av)^{-1}]\_{ij}                                                              \\\\
+    & \Longrightarrow \frac{\partial \tr(\Xv + \Av)^{-1}}{\partial \Xv} = - (\Xv + \Av)^{-1} (\Xv + \Av)^{-1}
 \end{align\*}
 - 取$\Uv = \Av \Xv \Bv$，$\Vv = \Xv^\top \Cv$，其中$\Av$、$\Bv$、$\Cv$与$\Xv$无关，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Av \Xv \Bv \Xv^\top \Cv)}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial (\Av \Xv \Bv)}{\partial x\_{ji}} \Xv^\top \Cv \right) + \tr \left( \Av \Xv \Bv \frac{\partial (\Xv^\top \Cv)}{\partial x\_{ji}} \right) \\\\
-                                                                        & = \tr \left( \Av \Ev\_{ji} \Bv \Xv^\top \Cv \right) + \tr \left( \Av \Xv \Bv \Ev\_{ij} \Cv \right)                                                                  \\\\
-                                                                        & = [\Bv \Xv^\top \Cv \Av]\_{ij} + [\Cv \Av \Xv \Bv]\_{ji}                                                                                                            \\\\
-                                                                        & \Longrightarrow \frac{\partial \tr(\Av \Xv \Bv \Xv^\top \Cv)}{\partial \Xv} = \Bv \Xv^\top \Cv \Av + \Bv^\top \Xv^\top \Av^\top \Cv^\top
+    & = \tr \left( \Av \Ev\_{ji} \Bv \Xv^\top \Cv \right) + \tr \left( \Av \Xv \Bv \Ev\_{ij} \Cv \right)                                                                  \\\\
+    & = [\Bv \Xv^\top \Cv \Av]\_{ij} + [\Cv \Av \Xv \Bv]\_{ji}                                                                                                            \\\\
+    & \Longrightarrow \frac{\partial \tr(\Av \Xv \Bv \Xv^\top \Cv)}{\partial \Xv} = \Bv \Xv^\top \Cv \Av + \Bv^\top \Xv^\top \Av^\top \Cv^\top
 \end{align\*}
 - 取$\Uv = \Av \Xv^\top \Bv$，$\Vv = \Xv \Cv$，其中$\Av$、$\Bv$、$\Cv$与$\Xv$无关，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Av \Xv^\top \Bv \Xv \Cv)}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial (\Av \Xv^\top \Bv)}{\partial x\_{ji}} \Xv \Cv \right) + \tr \left( \Av \Xv^\top \Bv \frac{\partial (\Xv \Cv)}{\partial x\_{ji}} \right) \\\\
-                                                                        & = \tr \left( \Av \Ev\_{ij} \Bv \Xv \Cv \right) + \tr \left( \Av \Xv^\top \Bv \Ev\_{ji} \Cv \right)                                                                  \\\\
-                                                                        & = [\Bv \Xv \Cv \Av]\_{ji} + [\Cv \Av \Xv^\top \Bv]\_{ij}                                                                                                            \\\\
-                                                                        & \Longrightarrow \frac{\partial \tr(\Av \Xv^\top \Bv \Xv \Cv)}{\partial \Xv} = \Cv \Av \Xv^\top \Bv + \Av^\top \Cv^\top \Xv^\top \Bv^\top
+    & = \tr \left( \Av \Ev\_{ij} \Bv \Xv \Cv \right) + \tr \left( \Av \Xv^\top \Bv \Ev\_{ji} \Cv \right)                                                                  \\\\
+    & = [\Bv \Xv \Cv \Av]\_{ji} + [\Cv \Av \Xv^\top \Bv]\_{ij}                                                                                                            \\\\
+    & \Longrightarrow \frac{\partial \tr(\Av \Xv^\top \Bv \Xv \Cv)}{\partial \Xv} = \Cv \Av \Xv^\top \Bv + \Av^\top \Cv^\top \Xv^\top \Bv^\top
 \end{align\*}
 - 取$\Uv = \Bv \Av$与$\Xv$无关，$\Vv = \Xv^n$，其中$n$是正整数，结合式(\ref{eq: power})可得
 \begin{align\*}
     \left[ \frac{\partial \tr(\Bv \Av \Xv^n)}{\partial \Xv} \right]\_{ij} & = \tr \left( \Bv \Av \frac{\partial \Xv^n}{\partial x\_{ji}} \right) = \tr \left( \Bv \Av \sum\_{k \in [n]} \Xv^{k-1} \frac{\partial \Xv}{\partial x\_{ji}} \Xv^{n-k} \right) = \sum\_{k \in [n]} \tr \left( \Bv \Av \Xv^{k-1} \frac{\partial \Xv}{\partial x\_{ji}} \Xv^{n-k} \right) \\\\
-                                                             & = \sum\_{k \in [n]} \tr ( \Xv^{n-k} \Bv \Av \Xv^{k-1} \Ev\_{ji} ) = \sum\_{k \in [n]} [\Xv^{n-k} \Bv \Av \Xv^{k-1}]\_{ij}                                                                                                                                                             \\\\
-                                                             & \Longrightarrow \frac{\partial \tr(\Bv \Av \Xv^n)}{\partial \Xv} = \frac{\partial \tr(\Av \Xv^n \Bv)}{\partial \Xv} = \sum\_{k \in [n]} \Xv^{n-k} \Bv \Av \Xv^{k-1}
+    & = \sum\_{k \in [n]} \tr ( \Xv^{n-k} \Bv \Av \Xv^{k-1} \Ev\_{ji} ) = \sum\_{k \in [n]} [\Xv^{n-k} \Bv \Av \Xv^{k-1}]\_{ij}                                                                                                                                                             \\\\
+    & \Longrightarrow \frac{\partial \tr(\Bv \Av \Xv^n)}{\partial \Xv} = \frac{\partial \tr(\Av \Xv^n \Bv)}{\partial \Xv} = \sum\_{k \in [n]} \Xv^{n-k} \Bv \Av \Xv^{k-1}
 \end{align\*}
 进一步若$\Av = \Bv = \Iv$，则
 \begin{align\*}
@@ -400,30 +400,30 @@
 结合式(\ref{eq: power})可得
 \begin{align\*}
     \frac{\partial \tr(e^{\Xv})}{\partial \Xv} & = \frac{\partial }{\partial \Xv} \tr \left( \Iv + \Xv + \frac{\Xv^2}{2!} + \frac{\Xv^3}{3!} + \cdots \right)                                                                                       \\\\
-                                   & = \frac{\partial \tr (\Iv)}{\partial \Xv} + \frac{\partial \tr (\Xv)}{\partial \Xv} + \frac{1}{2!} \frac{\partial \tr (\Xv^2)}{\partial \Xv} + \frac{1}{3!} \frac{\partial \tr (\Xv^3)}{\partial \Xv} + \cdots \\\\
-                                   & = \Iv + \Xv + \frac{\Xv^2}{2!} + \cdots = e^{\Xv}
+    & = \frac{\partial \tr (\Iv)}{\partial \Xv} + \frac{\partial \tr (\Xv)}{\partial \Xv} + \frac{1}{2!} \frac{\partial \tr (\Xv^2)}{\partial \Xv} + \frac{1}{3!} \frac{\partial \tr (\Xv^3)}{\partial \Xv} + \cdots \\\\
+    & = \Iv + \Xv + \frac{\Xv^2}{2!} + \cdots = e^{\Xv}
 \end{align\*}
 以及
 \begin{align\*}
     \frac{\partial \tr(\sin \Xv)}{\partial \Xv} & = \frac{\partial }{\partial \Xv} \tr \left( \Xv - \frac{\Xv^3}{3!} + \frac{\Xv^5}{5!} - \cdots \right)                                                                                                            \\\\
-                                    & = \frac{1}{1!} \frac{\partial \tr (\Xv)}{\partial \Xv} - \frac{1}{3!} \frac{\partial \tr (\Xv^3)}{\partial \Xv} + \frac{1}{5!} \frac{\partial \tr (\Xv^5)}{\partial \Xv} - \cdots                                             \\\\
-                                    & = \Iv - \frac{\Xv^2}{2!} + \frac{\Xv^4}{4!} - \cdots = \cos \Xv                                                                                                                                                               \\\\
+    & = \frac{1}{1!} \frac{\partial \tr (\Xv)}{\partial \Xv} - \frac{1}{3!} \frac{\partial \tr (\Xv^3)}{\partial \Xv} + \frac{1}{5!} \frac{\partial \tr (\Xv^5)}{\partial \Xv} - \cdots                                             \\\\
+    & = \Iv - \frac{\Xv^2}{2!} + \frac{\Xv^4}{4!} - \cdots = \cos \Xv                                                                                                                                                               \\\\
     \frac{\partial \tr(\cos \Xv)}{\partial \Xv} & = \frac{\partial }{\partial \Xv} \tr \left( \Iv - \frac{\Xv^2}{2!} + \frac{\Xv^4}{4!} - \frac{\Xv^6}{6!} + \cdots \right)                                                                                         \\\\
-                                    & = \frac{\partial \tr (\Iv)}{\partial \Xv} - \frac{1}{2!} \frac{\partial \tr (\Xv^2)}{\partial \Xv} + \frac{1}{4!} \frac{\partial \tr (\Xv^4)}{\partial \Xv} - \frac{1}{6!} \frac{\partial \tr (\Xv^6)}{\partial \Xv} + \cdots \\\\
-                                    & = - \Xv + \frac{\Xv^3}{3!} - \frac{\Xv^5}{5!} + \cdots = - \sin \Xv
+    & = \frac{\partial \tr (\Iv)}{\partial \Xv} - \frac{1}{2!} \frac{\partial \tr (\Xv^2)}{\partial \Xv} + \frac{1}{4!} \frac{\partial \tr (\Xv^4)}{\partial \Xv} - \frac{1}{6!} \frac{\partial \tr (\Xv^6)}{\partial \Xv} + \cdots \\\\
+    & = - \Xv + \frac{\Xv^3}{3!} - \frac{\Xv^5}{5!} + \cdots = - \sin \Xv
 \end{align\*}
 均与单变量的求导公式一样。
 
 - 取$\Uv = \Iv$，$\Vv = \Av \otimes \Xv$，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Av \otimes \Xv)}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial \Av \otimes \Xv}{\partial x\_{ji}} \right) = \tr \left( \Av \otimes \frac{\partial \Xv}{\partial x\_{ji}} \right) = \tr ( \Av \otimes \Ev\_{ji} ) = \tr(\Av) \delta\_{ij} \\\\
-                                                               & \Longrightarrow \frac{\partial \tr(\Av \otimes \Xv)}{\partial \Xv} = \tr(\Av) \Iv
+    & \Longrightarrow \frac{\partial \tr(\Av \otimes \Xv)}{\partial \Xv} = \tr(\Av) \Iv
 \end{align\*}
 - 取$\Uv = \Iv$，$\Vv = \Xv \otimes \Xv$，则
 \begin{align\*}
     \left[ \frac{\partial \tr(\Xv \otimes \Xv)}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial \Xv \otimes \Xv}{\partial x\_{ji}} \right) = \tr \left( \frac{\partial \Xv}{\partial x\_{ji}} \otimes \Xv + \Xv \otimes \frac{\partial \Xv}{\partial x\_{ji}} \right) \\\\
-                                                               & = \tr ( \Ev\_{ji} \otimes \Xv ) + \tr ( \Xv \otimes \Ev\_{ji} ) = 2 \tr(\Xv) \delta\_{ij}                                                                                                         \\\\
-                                                               & \Longrightarrow \frac{\partial \tr(\Xv \otimes \Xv)}{\partial \Xv} = 2 \tr(\Xv) \Iv
+    & = \tr ( \Ev\_{ji} \otimes \Xv ) + \tr ( \Xv \otimes \Ev\_{ji} ) = 2 \tr(\Xv) \delta\_{ij}                                                                                                         \\\\
+    & \Longrightarrow \frac{\partial \tr(\Xv \otimes \Xv)}{\partial \Xv} = 2 \tr(\Xv) \Iv
 \end{align\*}
 
 #### 行列式对矩阵求导
@@ -478,13 +478,13 @@
 　　设$\Xv \in \Rbb^{m \times n}$、$\Av \in \Rbb^{m \times m}$、$\Yv = \Xv^\top \Av \Xv \in \Rbb^{n \times n}$可逆，$\Av$与$\Xv$无关，易知有
 \begin{align\*}
     \left[ \frac{\partial |\Xv^\top \Av \Xv|}{\partial \Xv} \right]\_{ij} & = \tr \left( \Yv^* \frac{\partial \Xv^\top \Av \Xv}{\partial x\_{ji}} \right) = \tr \left( \Yv^* \frac{\partial \Xv^\top}{\partial x\_{ji}} \Av \Xv \right) + \tr \left( \Yv^* \Xv^\top \Av \frac{\partial \Xv}{\partial x\_{ji}} \right) \\\\
-                                                                         & = \tr ( \Yv^* \Ev\_{ij} \Av \Xv ) + \tr ( \Yv^* \Xv^\top \Av \Ev\_{ji} ) = [\Av \Xv \Yv^*]\_{ji} + [\Yv^* \Xv^\top \Av]\_{ij}
+    & = \tr ( \Yv^* \Ev\_{ij} \Av \Xv ) + \tr ( \Yv^* \Xv^\top \Av \Ev\_{ji} ) = [\Av \Xv \Yv^*]\_{ji} + [\Yv^* \Xv^\top \Av]\_{ij}
 \end{align\*}
 于是
 \begin{align\*}
     \frac{\partial |\Xv^\top \Av \Xv|}{\partial \Xv} & = (\Av \Xv \Yv^*)^\top + \Yv^* \Xv^\top \Av = (\Av \Xv |\Xv^\top \Av \Xv| (\Xv^\top \Av \Xv)^{-1})^\top + |\Xv^\top \Av \Xv| (\Xv^\top \Av \Xv)^{-1} \Xv^\top \Av \\\\
-                                                     & = |\Xv^\top \Av \Xv| (\Xv^\top \Av^\top \Xv)^{-1} \Xv^\top \Av^\top + |\Xv^\top \Av \Xv| (\Xv^\top \Av \Xv)^{-1} \Xv^\top \Av                                     \\\\
-                                                     & = |\Xv^\top \Av \Xv| ((\Xv^\top \Av^\top \Xv)^{-1} \Xv^\top \Av^\top + (\Xv^\top \Av \Xv)^{-1} \Xv^\top \Av)
+    & = |\Xv^\top \Av \Xv| (\Xv^\top \Av^\top \Xv)^{-1} \Xv^\top \Av^\top + |\Xv^\top \Av \Xv| (\Xv^\top \Av \Xv)^{-1} \Xv^\top \Av                                     \\\\
+    & = |\Xv^\top \Av \Xv| ((\Xv^\top \Av^\top \Xv)^{-1} \Xv^\top \Av^\top + (\Xv^\top \Av \Xv)^{-1} \Xv^\top \Av)
 \end{align\*}
 若$\Av$对称，则
 \begin{align\*}
