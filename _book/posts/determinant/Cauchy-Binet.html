@@ -1,0 +1,779 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cauchy-Binet 公式 · Notes on Math</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    微积分
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../calculus/Wallis-formula.html">
+            
+                <a href="../calculus/Wallis-formula.html">
+            
+                    
+                    Wallis 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../calculus/gamma.html">
+            
+                <a href="../calculus/gamma.html">
+            
+                    
+                    Gamma 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    线性代数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../matrix/derivative.html">
+            
+                <a href="../matrix/derivative.html">
+            
+                    
+                    导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../matrix/Strassen.html">
+            
+                <a href="../matrix/Strassen.html">
+            
+                    
+                    乘法加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../matrix/TU-matrix.html">
+            
+                <a href="../matrix/TU-matrix.html">
+            
+                    
+                    全幺模矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../matrix/nuclear-norm-ball.html">
+            
+                <a href="../matrix/nuclear-norm-ball.html">
+            
+                    
+                    核范数球
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    行列式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="Cauchy-Binet.html">
+            
+                <a href="Cauchy-Binet.html">
+            
+                    
+                    Cauchy-Binet 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测度论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../measure/set-algebra.html">
+            
+                <a href="../measure/set-algebra.html">
+            
+                    
+                    集合代数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../measure/set-ring-algebra-ring.html">
+            
+                <a href="../measure/set-ring-algebra-ring.html">
+            
+                    
+                    此环非彼环乎？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../measure/interval.html">
+            
+                <a href="../measure/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    概率
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../probability/beta-dirichlet-distribution.html">
+            
+                <a href="../probability/beta-dirichlet-distribution.html">
+            
+                    
+                    Beta 分布和 Dirichlet 分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../probability/conjugate-prior.html">
+            
+                <a href="../probability/conjugate-prior.html">
+            
+                    
+                    共轭先验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../optimization/analysis/extreme-point.html">
+            
+                <a href="../optimization/analysis/extreme-point.html">
+            
+                    
+                    极点的等价定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    对偶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../optimization/dual/LP-dual-interpretation.html">
+            
+                <a href="../optimization/dual/LP-dual-interpretation.html">
+            
+                    
+                    线性规划下的解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../optimization/dual/MCFC.html">
+            
+                <a href="../optimization/dual/MCFC.html">
+            
+                    
+                    匹配、覆盖、流、割
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Cauchy-Binet 公式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;&#x4F17;&#x6240;&#x5468;&#x77E5;&#x5BF9;&#x4E8E;&#x65B9;&#x9635;<script type="math/tex; ">\Av</script>&#x3001;<script type="math/tex; ">\Bv</script>&#x6709;
+\begin{align} \label{eq: det-product}
+    \det(\Av \Bv) = \det(\Av) \det(\Bv)
+\end{align}
+&#x66F4;&#x4E00;&#x822C;&#x7684;&#x8BBE;<script type="math/tex; ">\Av \in \Rbb^{m \times n}</script>&#x3001;<script type="math/tex; ">\Bv \in \Rbb^{n \times m}</script>&#xFF0C;&#x8BB0;<script type="math/tex; ">S_{[n],m}</script>&#x4E3A;&#x96C6;&#x5408;<script type="math/tex; ">[n]</script>&#x7684;&#x6240;&#x6709;<script type="math/tex; ">m</script>&#x5143;&#x5B50;&#x96C6;&#x6784;&#x6210;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5219;
+\begin{align} \label{eq: Cauchy-Binet}
+    \det(\Av \Bv) = \sum_{S \in S_{[n],m}} \det(\Av_{[m],S}) \det(\Bv_{S,[m]})
+\end{align}
+&#x8FD9;&#x5C31;&#x662F;<span class="orange">Cauchy-Binet&#x516C;&#x5F0F;</span>&#x3002;</p>
+<p>&#x3000;&#x3000;&#x8003;&#x8651;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ol>
+<li><script type="math/tex; ">m = n</script>&#xFF0C;&#x6B64;&#x65F6;<script type="math/tex; ">S_{[n],n}</script>&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x662F;<script type="math/tex; ">[n]</script>&#xFF0C;&#x5F0F;(\ref{eq: Cauchy-Binet})&#x5C31;&#x9000;&#x5316;&#x6210;&#x4E86;&#x5F0F;(\ref{eq: det-product})&#xFF1B;</li>
+<li><script type="math/tex; ">m > n</script>&#xFF0C;&#x6B64;&#x65F6;<script type="math/tex; ">S_{[n],m}</script>&#x662F;&#x4E2A;&#x7A7A;&#x96C6;&#xFF0C;&#x56E0;&#x6B64;&#x5F0F;(\ref{eq: Cauchy-Binet})&#x7B49;&#x53F7;&#x53F3;&#x8FB9;&#x7684;&#x6C42;&#x548C;&#x4E3A;&#x96F6;&#xFF0C;&#x800C;&#x5DE6;&#x8FB9;&#x662F;&#x4E2A;&#x79E9;&#x4E3A;<script type="math/tex; ">n</script>&#x7684;<script type="math/tex; ">m</script>&#x9636;&#x65B9;&#x9635;&#xFF0C;<span class="orange">&#x975E;&#x6EE1;&#x79E9;&#x77E9;&#x9635;</span>&#x5BF9;&#x5E94;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x503C;&#x4E3A;&#x96F6;&#xFF1B;</li>
+<li><script type="math/tex; ">m < n</script>&#xFF0C;&#x4E3E;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;<script type="math/tex; ">n=3</script>&#x3001;<script type="math/tex; ">m=2</script>&#x3001;<script type="math/tex; ">S_{[n],m} = \{ \{1,2\}, \{2,3\}, \{1,3\} \}</script>&#xFF0C;&#x6B64;&#x65F6;&#x6709;</li>
+</ol>
+<p>\begin{align*}
+    \left| \begin{bmatrix}
+        a_{11} &amp; a_{12} &amp; a_{13} \\ a_{21} &amp; a_{22} &amp; a_{23}
+    \end{bmatrix} \begin{bmatrix}
+        b_{11} &amp; b_{12} \\ b_{21} &amp; b_{22} \\ b_{31} &amp; b_{32}
+    \end{bmatrix} \right| = \underbrace{\left| \begin{matrix}
+            a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22}
+        \end{matrix} \right| \left| \begin{matrix}
+            b_{11} &amp; b_{12} \\ b_{21} &amp; b_{22}
+        \end{matrix} \right|}_{S=\{1,2\}} + \underbrace{\left| \begin{matrix}
+            a_{12} &amp; a_{13} \\ a_{22} &amp; a_{23}
+        \end{matrix} \right| \left| \begin{matrix}
+            b_{21} &amp; b_{22} \\ b_{31} &amp; b_{32}
+        \end{matrix} \right|}_{S=\{2,3\}} + \underbrace{\left| \begin{matrix}
+            a_{11} &amp; a_{13} \\ a_{21} &amp; a_{23}
+        \end{matrix} \right| \left| \begin{matrix}
+            b_{11} &amp; b_{12} \\ b_{31} &amp; b_{32}
+        \end{matrix} \right|}_{S=\{1,3\}}
+\end{align*}</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8BC1;&#x660E;&#xFF0C;&#x8BB0;<script type="math/tex; ">\Av</script>&#x7684;&#x5217;&#x5206;&#x522B;&#x4E3A;<script type="math/tex; ">\av_1, \ldots, \av_n</script>&#xFF0C;&#x5219;
+\begin{align*}
+    \Av \Bv = \begin{bmatrix}
+        \sum_i b_{i1} \av_i &amp; \sum_i b_{i2} \av_i &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{bmatrix}
+\end{align*}
+&#x5373;<script type="math/tex; ">\Av \Bv</script>&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x662F;<script type="math/tex; ">\av_1, \ldots, \av_n</script>&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#x3002;&#x4E0B;&#x9762;&#x4F9D;&#x6B21;&#x5C55;&#x5F00;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;&#x6613;&#x77E5;
+\begin{align*}
+    \det(\Av \Bv) &amp; = | \begin{matrix}
+        \sum_i b_{i1} \av_i &amp; \sum_i b_{i2} \av_i &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} |                                                          \\
+                  &amp; = b_{11} | \begin{matrix}
+        \av_1 &amp; \sum_i b_{i2} \av_i &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} | + \cdots +  b_{n1} | \begin{matrix}
+        \av_n &amp; \sum_i b_{i2} \av_i &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} |
+\end{align*}
+&#x63A5;&#x7740;&#x5C55;&#x5F00;&#x7B2C;&#x4E8C;&#x5217;&#xFF0C;&#x6613;&#x77E5;&#x4E0A;&#x5F0F;&#x53F3;&#x8FB9;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x53C8;&#x4F1A;&#x62C6;&#x5206;&#x6210;<script type="math/tex; ">n</script>&#x9879;&#xFF0C;&#x5373;
+\begin{align*}
+    \forall k \in [n], \quad &amp; b_{k1} | \begin{matrix}
+        \av_k &amp; \sum_i b_{i2} \av_i &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} | = b_{k1} (b_{12} | \begin{matrix}
+        \av_k &amp; \av_1 &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} | + \cdots + b_{n2} | \begin{matrix}
+        \av_k &amp; \av_n &amp; \ldots &amp; \sum_i b_{im} \av_i
+    \end{matrix} |)
+\end{align*}
+&#x6700;&#x7EC8;&#x5168;&#x90E8;<script type="math/tex; ">m</script>&#x5217;&#x5C55;&#x5F00;&#x5B8C;&#x6BD5;&#xFF0C;&#x5C06;&#x4F1A;&#x5F97;&#x5230;<script type="math/tex; ">n^m</script>&#x9879;&#xFF1A;
+\begin{align*}
+    \det(\Av \Bv) = \sum_{\phi} b_{\phi(1),1} b_{\phi(2),2} \cdots b_{\phi(m),m} | \begin{matrix}
+        \av_{\phi(1)} &amp; \av_{\phi(2)} &amp; \ldots &amp; \av_{\phi(m)}
+    \end{matrix} |
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">\phi</script>&#x662F;<script type="math/tex; ">[m] \mapsto [n]</script>&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x6C42;&#x548C;&#x904D;&#x5386;&#x6240;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x6620;&#x5C04;&#x3002;&#x6CE8;&#x610F;&#x82E5;&#x884C;&#x5217;&#x5F0F;&#x4E24;&#x5217;&#x76F8;&#x540C;&#xFF0C;&#x884C;&#x5217;&#x5F0F;&#x503C;&#x4E3A;&#x96F6;&#xFF0C;&#x56E0;&#x6B64;&#x5B9E;&#x9645;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8003;&#x8651;<span class="orange">&#x5355;&#x5C04;</span>&#xFF0C;&#x8FD9;&#x6837;&#x4E0A;&#x5F0F;&#x7684;&#x6C42;&#x548C;&#x9879;&#x4E2D;&#x5C31;&#x53EA;&#x5269;&#x4E0B;<script type="math/tex; ">A_n^m</script>&#x9879;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x5BF9;&#x4E8E;&#x4EFB;&#x4E00;&#x6EE1;&#x8DB3;<script type="math/tex; ">\phi(1) < \phi(2) < \cdots < \phi(m)</script>&#x7684;&#x9879;&#xFF0C;&#x663E;&#x7136;&#x5B83;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x662F;<script type="math/tex; ">\Av</script>&#x7684;&#x67D0;&#x4E2A;<script type="math/tex; ">m</script>&#x9636;&#x5B50;&#x65B9;&#x9635;&#xFF0C;&#x6545;
+\begin{align*}
+    | \begin{matrix}
+        \av_{\phi(1)} &amp; \av_{\phi(2)} &amp; \ldots &amp; \av_{\phi(m)}
+    \end{matrix} | = \det(\Av_{[m], S})
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">S = \{\phi(1), \phi(2), \ldots, \phi(m)\}</script>&#x3002;&#x73B0;&#x8003;&#x8651;&#x5176;&#x5B83;&#x884C;&#x5217;&#x5F0F;&#x4E5F;&#x7531;<script type="math/tex; ">\av_{\phi(1)}, \ldots, \av_{\phi(m)}</script>&#x6784;&#x6210;&#x7684;&#x9879;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x9879;&#x6709;<script type="math/tex; ">m!</script>&#x4E2A;&#xFF0C;&#x5747;&#x5448;&#x578B;
+\begin{align*}
+    b_{\sigma \circ \phi(1),1} b_{\sigma \circ \phi(2),2} \cdots b_{\sigma \circ \phi(m),m} | \begin{matrix}
+        \av_{\sigma \circ \phi(1)} &amp; \av_{\sigma \circ \phi(2)} &amp; \ldots &amp; \av_{\sigma \circ \phi(m)}
+    \end{matrix} |
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">\sigma</script>&#x662F;<script type="math/tex; ">S \mapsto S</script>&#x7684;<span class="orange">&#x7F6E;&#x6362;</span>&#xFF0C;&#x7531;&#x4E8E;&#x884C;&#x5217;&#x5F0F;&#x4EA4;&#x6362;&#x4E24;&#x5217;&#xFF0C;&#x503C;&#x4E0D;&#x53D8;&#x7B26;&#x53F7;&#x53D6;&#x53CD;&#xFF0C;&#x56E0;&#x6B64;
+\begin{align*}
+    | \begin{matrix}
+        \av_{\sigma \circ \phi(1)} &amp; \av_{\sigma \circ \phi(2)} &amp; \ldots &amp; \av_{\sigma \circ \phi(m)}
+    \end{matrix} | = (-1)^{\sgn (\sigma)} | \begin{matrix}
+        \av_{\phi(1)} &amp; \av_{\phi(2)} &amp; \ldots &amp; \av_{\phi(m)}
+    \end{matrix} | = (-1)^{\sgn (\sigma)} \det(\Av_{[m], S})
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">\sgn (\sigma)</script>&#x662F;<script type="math/tex; ">\sigma</script>&#x4EA7;&#x751F;&#x7684;<span class="orange">&#x9006;&#x5E8F;&#x5BF9;</span>&#x7684;&#x4E2A;&#x6570;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x9879;&#x6C42;&#x548C;&#x4E3A;
+\begin{align*}
+    \left( \sum_{\sigma} (-1)^{\sgn (\sigma)} b_{\sigma \circ \phi(1),1} b_{\sigma \circ \phi(2),2} \cdots b_{\sigma \circ \phi(m),m} \right) \det(\Av_{[m], S})
+\end{align*}
+&#x6CE8;&#x610F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x5C31;&#x662F;<script type="math/tex; ">\Bv</script>&#x7684;&#x7B2C;<script type="math/tex; ">\phi(1), \ldots, \phi(m)</script>&#x884C;&#x6784;&#x6210;&#x7684;<script type="math/tex; ">m</script>&#x9636;&#x5B50;&#x65B9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x5C55;&#x5F00;&#xFF0C;&#x56E0;&#x6B64;&#x4E0A;&#x5F0F;&#x7B49;&#x4E8E;
+\begin{align*}
+    \det(\Av_{[m], S}) \det(\Bv_{S,[m]})
+\end{align*}
+&#x53D6;&#x904D;<script type="math/tex; ">C_n^m</script>&#x4E2A;&#x8FD9;&#x6837;<span class="orange">&#x5355;&#x8C03;&#x9012;&#x589E;</span>&#x7684;<script type="math/tex; ">\phi</script>&#x5373;&#x53EF;&#x5F97;
+\begin{align*}
+    \det(\Av \Bv) = \sum_{S \in S_{[n],m}} \det(\Av_{[m],S}) \det(\Bv_{S,[m]})
+\end{align*}</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-19 10:20:29
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cauchy-Binet 公式","level":"1.3.2.1","depth":3,"next":{"title":"测度论","level":"1.4","depth":1,"ref":"","articles":[{"title":"集合代数","level":"1.4.1","depth":2,"path":"posts/measure/set-algebra.md","ref":"posts/measure/set-algebra.md","articles":[]},{"title":"此环非彼环乎？","level":"1.4.2","depth":2,"path":"posts/measure/set-ring-algebra-ring.md","ref":"posts/measure/set-ring-algebra-ring.md","articles":[]},{"title":"区间","level":"1.4.3","depth":2,"path":"posts/measure/interval.md","ref":"posts/measure/interval.md","articles":[]}]},"previous":{"title":"行列式","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"Cauchy-Binet 公式","level":"1.3.2.1","depth":3,"path":"posts/determinant/Cauchy-Binet.md","ref":"posts/determinant/Cauchy-Binet.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax@git+https://github.com/CHN-beta/plugin-mathjax.git#update_cdn","splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"notes-math"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"mathjax":{"forceSVG":false,"version":"2.7.1"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Notes on Math","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"数学笔记"},"file":{"path":"posts/determinant/Cauchy-Binet.md","mtime":"2021-06-19T02:20:29.755Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-14T08:03:33.998Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

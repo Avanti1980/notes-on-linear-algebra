@@ -1,26 +1,27 @@
 # Summary
 
--   [简介](README.md)
--   微积分
-    -   [Wallis公式](posts/calculus/Wallis-formula.md)
-    -   [Gamma函数](posts/calculus/gamma.md)
--   线性代数
-    -   矩阵
-        -   [导数](posts/matrix/derivative.md)
-        -   [全幺模矩阵](posts/matrix/TU-matrix.md)
-        -   [核范数球](/posts/matrix/nuclear-norm-ball.md)
-    -   行列式
-        -   [Cauchy-Binet公式](posts/determinant/Cauchy-Binet.md)
--   测度论
-    -   [集合代数](posts/measure/set-algebra.md)
-    -   [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
-    -   [区间](posts/measure/interval.md)
--   概率
-    -   [Beta分布和Dirichlet分布](posts/probability/beta-dirichlet-distribution.md)
-    -   [共轭先验](posts/probability/conjugate-prior.md)
--   优化
-    -   分析
-        -   [极点的等价定义](posts/optimization/analysis/extreme-point.md)
-    -   对偶
-        -   [线性规划下的解释](posts/optimization/dual/LP-dual-interpretation.md)
-        -   [匹配、覆盖、流、割](posts/optimization/dual/MCFC.md)
+- [简介](README.md)
+- 微积分
+  - [Wallis 公式](posts/calculus/Wallis-formula.md)
+  - [Gamma 函数](posts/calculus/gamma.md)
+- 线性代数
+  - 矩阵
+    - [导数](posts/matrix/derivative.md)
+    - [乘法加速](posts/matrix/Strassen.md)
+    - [全幺模矩阵](posts/matrix/TU-matrix.md)
+    - [核范数球](/posts/matrix/nuclear-norm-ball.md)
+  - 行列式
+    - [Cauchy-Binet 公式](posts/determinant/Cauchy-Binet.md)
+- 测度论
+  - [集合代数](posts/measure/set-algebra.md)
+  - [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
+  - [区间](posts/measure/interval.md)
+- 概率
+  - [Beta 分布和 Dirichlet 分布](posts/probability/beta-dirichlet-distribution.md)
+  - [共轭先验](posts/probability/conjugate-prior.md)
+- 优化
+  - 分析
+    - [极点的等价定义](posts/optimization/analysis/extreme-point.md)
+  - 对偶
+    - [线性规划下的解释](posts/optimization/dual/LP-dual-interpretation.md)
+    - [匹配、覆盖、流、割](posts/optimization/dual/MCFC.md)

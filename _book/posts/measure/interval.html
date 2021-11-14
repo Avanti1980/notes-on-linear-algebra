@@ -1,0 +1,778 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>区间 · Notes on Math</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Avanti">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="set-ring-algebra-ring.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    微积分
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../calculus/Wallis-formula.html">
+            
+                <a href="../calculus/Wallis-formula.html">
+            
+                    
+                    Wallis 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../calculus/gamma.html">
+            
+                <a href="../calculus/gamma.html">
+            
+                    
+                    Gamma 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    线性代数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    矩阵
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../matrix/derivative.html">
+            
+                <a href="../matrix/derivative.html">
+            
+                    
+                    导数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../matrix/Strassen.html">
+            
+                <a href="../matrix/Strassen.html">
+            
+                    
+                    乘法加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../matrix/TU-matrix.html">
+            
+                <a href="../matrix/TU-matrix.html">
+            
+                    
+                    全幺模矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../matrix/nuclear-norm-ball.html">
+            
+                <a href="../matrix/nuclear-norm-ball.html">
+            
+                    
+                    核范数球
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    行列式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../determinant/Cauchy-Binet.html">
+            
+                <a href="../determinant/Cauchy-Binet.html">
+            
+                    
+                    Cauchy-Binet 公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测度论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="set-algebra.html">
+            
+                <a href="set-algebra.html">
+            
+                    
+                    集合代数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="set-ring-algebra-ring.html">
+            
+                <a href="set-ring-algebra-ring.html">
+            
+                    
+                    此环非彼环乎？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="interval.html">
+            
+                <a href="interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    概率
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../probability/beta-dirichlet-distribution.html">
+            
+                <a href="../probability/beta-dirichlet-distribution.html">
+            
+                    
+                    Beta 分布和 Dirichlet 分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../probability/conjugate-prior.html">
+            
+                <a href="../probability/conjugate-prior.html">
+            
+                    
+                    共轭先验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    优化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../optimization/analysis/extreme-point.html">
+            
+                <a href="../optimization/analysis/extreme-point.html">
+            
+                    
+                    极点的等价定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    对偶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../optimization/dual/LP-dual-interpretation.html">
+            
+                <a href="../optimization/dual/LP-dual-interpretation.html">
+            
+                    
+                    线性规划下的解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../optimization/dual/MCFC.html">
+            
+                <a href="../optimization/dual/MCFC.html">
+            
+                    
+                    匹配、覆盖、流、割
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >区间</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x3000;&#x3000;Lebesgue&#x79EF;&#x5206;&#x7684;&#x6838;&#x5FC3;&#x95EE;&#x9898;&#x662F;&#x7ED9;<script type="math/tex; ">\Rbb</script>&#x7684;&#x5B50;&#x96C6;&#x8D4B;&#x4E88;&#x201C;&#x957F;&#x5EA6;&#x201D;&#xFF0C;&#x800C;<script type="math/tex; ">\Rbb</script>&#x4E0A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5B50;&#x96C6;&#x5C31;&#x662F;<span class="violet">&#x533A;&#x95F4;</span>&#xFF0C;&#x6545;&#x4ECE;&#x533A;&#x95F4;&#x5165;&#x624B;&#x4E0D;&#x5931;&#x4E3A;&#x4E00;&#x79CD;&#x9014;&#x5F84;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x533A;&#x95F4;&#x662F;&#x62E5;&#x6709;<span class="violet">&#x51F8;&#x6027;</span>&#x7684;&#x4E00;&#x7C7B;&#x5B50;&#x96C6;&#xFF0C;&#x5171;&#x6709;10&#x79CD;&#xFF1A;
+\begin{align*}
+    (a,b), \quad [a,b), \quad (a,b], \quad [a,b], \quad (a,\infty), \quad [a,\infty), \quad (-\infty,a), \quad (-\infty,a], \quad (-\infty, \infty), \quad \emptyset
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">\Rbb = (-\infty, \infty)</script>&#x5C31;&#x662F;&#x5168;&#x96C6;&#xFF0C;<script type="math/tex; ">\emptyset</script>&#x662F;&#x5176;&#x8865;&#x96C6;&#xFF0C;&#x6B64;&#x5916;<script type="math/tex; ">[a,a] = \{ a \}</script>&#xFF0C;&#x56E0;&#x6B64;&#x5355;&#x70B9;&#x96C6;&#x4E5F;&#x5C5E;&#x4E8E;&#x533A;&#x95F4;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x5BF9;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x533A;&#x95F4;<script type="math/tex; ">I_1</script>&#x3001;<script type="math/tex; ">I_2</script>&#xFF0C;&#x5176;&#x4EA4;&#x96C6;&#x662F;&#x4E00;&#x4E2A;&#x533A;&#x95F4;(<script type="math/tex; ">\emptyset</script>&#x4E5F;&#x662F;&#x533A;&#x95F4;)&#xFF1B;&#x5176;&#x5E76;&#x96C6;&#x8981;&#x4E48;&#x662F;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x8981;&#x4E48;&#x5B58;&#x5728;<script type="math/tex; ">t</script>&#x6EE1;&#x8DB3;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E4B;&#x4E00;&#xFF1A;(1).&#x5BF9;<script type="math/tex; ">\forall x_1 \in I_1</script>&#x3001;<script type="math/tex; ">\forall x_2 \in I_2</script>&#x6709;<script type="math/tex; ">x_1 < t < x_2</script>&#xFF1B;(2).&#x5BF9;<script type="math/tex; ">\forall x_1 \in I_1</script>&#x3001;<script type="math/tex; ">\forall x_2 \in I_2</script>&#x6709;<script type="math/tex; ">x_2 < t < x_1</script>&#xFF1B;&#x5176;&#x8865;&#x96C6;&#x8981;&#x4E48;&#x662F;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x8981;&#x4E48;&#x662F;&#x4E24;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x5E76;&#x96C6;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x9762;&#x8003;&#x8651;&#x6240;&#x6709;&#x7531;<span class="violet">&#x533A;&#x95F4;&#x7684;&#x6709;&#x9650;&#x5E76;</span>(finite union)&#x6784;&#x6210;&#x7684;&#x96C6;&#x5408;<script type="math/tex; ">\Ical</script>&#xFF0C;&#x4E0D;&#x96BE;&#x9A8C;&#x8BC1;<script type="math/tex; ">\Ical</script>&#x662F;&#x4E00;&#x4E2A;<span class="violet">&#x4EE3;&#x6570;</span>&#x3002;&#x9996;&#x5148;&#x5168;&#x96C6;<script type="math/tex; ">\Rbb = (-\infty, \infty) \in \Ical</script>&#xFF1B;&#x8BBE;<script type="math/tex; ">E_1 = \cup_{j \in [n]} I_j \in \Ical</script>&#xFF0C;<script type="math/tex; ">E_2 = \cup_{k \in [n']} I'_k \in \Ical</script>&#xFF0C;&#x90A3;&#x4E48;<script type="math/tex; ">E_1 \cup E_2</script>&#x663E;&#x7136;&#x8FD8;&#x662F;&#x533A;&#x95F4;&#x7684;&#x6709;&#x9650;&#x5E76;&#xFF1B;&#x53C8;
+\begin{align*}
+    E_1 \cap E_2 = (\cup_{j \in [n]} I_j) \cap (\cup_{k \in [n&apos;]} I&apos;_k) = \cup_{j \in [n]} \cup_{k \in [n&apos;]} (I_j \cap I&apos;_k)
+\end{align*}
+&#x7531;&#x4E8E;<script type="math/tex; ">I_j \cap I'_k</script>&#x662F;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;<script type="math/tex; ">E_1 \cap E_2</script>&#x4E5F;&#x662F;&#x533A;&#x95F4;&#x7684;&#x6709;&#x9650;&#x5E76;&#xFF0C;&#x4ECE;&#x800C;&#x5C5E;&#x4E8E;<script type="math/tex; ">\Ical</script>&#xFF0C;&#x6700;&#x540E;&#x7531;De Morgan&#x5F8B;&#x77E5;<script type="math/tex; ">\complement E_1 = \cap_{j \in [n]} \complement I_j</script>&#xFF0C;&#x800C;&#x6BCF;&#x4E2A;<script type="math/tex; ">\complement I_j</script>&#x5747;&#x662F;&#x533A;&#x95F4;&#x7684;&#x6709;&#x9650;&#x5E76;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x4EA4;&#x96C6;&#x4E5F;&#x5C5E;&#x4E8E;<script type="math/tex; ">\Ical</script>&#xFF0C;&#x6545;<script type="math/tex; ">\Ical</script>&#x662F;&#x4E00;&#x4E2A;&#x4EE3;&#x6570;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x5BF9;&#x4E8E;<script type="math/tex; ">\Ical</script>&#x4E2D;&#x4EFB;&#x4E00;&#x5143;&#x7D20;<script type="math/tex; ">E</script>&#xFF0C;&#x5C06;&#x80FD;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x90FD;&#x5408;&#x5E76;&#x6389;&#xFF0C;&#x5219;&#x53EF;&#x5F97;&#x5230;&#x6807;&#x51C6;&#x5F62;&#x5F0F;
+\begin{align*}
+    E = I_1 \cup \cdots \cup I_n
+\end{align*}
+&#x5176;&#x4E2D;<script type="math/tex; ">I_1, \ldots, I_n</script>&#x4E24;&#x4E24;&#x4EA4;&#x96C6;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E14;&#x5B58;&#x5728;<script type="math/tex; ">t_1, \ldots, t_{n-1}</script>&#x6EE1;&#x8DB3;
+\begin{align*}
+    x_1 &lt; t_1 &lt; x_2 &lt; t_2 &lt; \cdots &lt; t_{n-1} &lt; x_n, \quad \forall x_j \in I_j, ~ j \in [n]
+\end{align*}
+&#x540E;&#x6587;&#x5982;&#x65E0;&#x7279;&#x6B8A;&#x8BF4;&#x660E;&#xFF0C;<script type="math/tex; ">\Ical</script>&#x4E2D;&#x7684;&#x4EFB;&#x4E00;&#x5199;&#x6210;&#x8BE5;&#x5F62;&#x5F0F;&#x7684;&#x5143;&#x7D20;&#x9ED8;&#x8BA4;&#x4E3A;&#x5176;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x9762;&#x8003;&#x8651;&#x7ED9;&#x533A;&#x95F4;&#x8D4B;&#x4E88;&#x957F;&#x5EA6;&#xFF0C;&#x76F4;&#x89C9;&#x4E0A;&#x6765;&#x8BF4;<span class="violet">&#x533A;&#x95F4;&#x957F;&#x5EA6;&#x5C31;&#x662F;&#x5176;&#x7AEF;&#x70B9;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x65E0;&#x754C;&#x533A;&#x95F4;&#x957F;&#x5EA6;&#x4E3A;<script type="math/tex; ">\infty</script>&#xFF0C;&#x4E0D;&#x76F8;&#x4EA4;&#x533A;&#x95F4;&#x7684;&#x5E76;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x5B83;&#x4EEC;&#x7684;&#x957F;&#x5EA6;&#x4E4B;&#x548C;</span>&#xFF0C;&#x6545;&#x5F15;&#x5165;&#x957F;&#x5EA6;&#x51FD;&#x6570;<script type="math/tex; ">m: \Ical \mapsto [0, \infty]</script>&#xFF1A;
+\begin{align*}
+     &amp; m((a,b)) = m([a,b)) = m((a,b]) = m([a,b]) = b - a, \quad m(\emptyset) = 0                       \\
+     &amp; m((a,\infty)) = m([a,\infty)) = m((-\infty,a)) = m((-\infty,a]) = m((-\infty, \infty)) = \infty
+\end{align*}
+&#x5BF9;&#x4EFB;&#x610F;<script type="math/tex; ">E = I_1 \cup \cdots \cup I_n \in \Ical</script>&#xFF0C;<span class="red">&#x5B9A;&#x4E49;</span><script type="math/tex; ">m(E) = \sum_{j \in [n]} m(I_j)</script>&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4E0A;&#x8FF0;&#x5B9A;&#x4E49;&#x7684;&#x957F;&#x5EA6;&#x51FD;&#x6570;<script type="math/tex; ">m: \Ical \mapsto [0, \infty]</script>&#x6EE1;&#x8DB3;</p>
+<ol>
+<li><span class="violet">&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;</span>&#xFF1A;&#x8BBE;<script type="math/tex; ">E_1, E_2, \ldots, E_n \in \Ical</script>&#x4E14;&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x5219;<script type="math/tex; ">m(\cup_{j \in [n]} E_j) = \sum_{j \in [n]} m(E_j)</script>&#xFF1B;</li>
+<li><span class="violet">&#x5355;&#x8C03;&#x6027;</span>&#xFF1A;&#x8BBE;<script type="math/tex; ">E_1, E_2 \in \Ical</script>&#x4E14;<script type="math/tex; ">E_1 \subseteq E_2</script>&#xFF0C;&#x5219;<script type="math/tex; ">m(E_1) \leq m(E_2)</script>&#xFF1B;</li>
+<li><span class="violet">&#x6709;&#x9650;&#x6B21;&#x53EF;&#x52A0;&#x6027;</span>&#xFF1A;&#x8BBE;<script type="math/tex; ">E_1, E_2, \ldots \in \Ical</script>&#xFF0C;&#x5219;<script type="math/tex; ">m(\cup_{j \in [n]} E_j) \leq \sum_{j \in [n]} m(E_j)</script>&#xFF1B;</li>
+<li><span class="violet">&#x53EF;&#x6570;&#x53EF;&#x52A0;&#x6027;</span>&#xFF1A;&#x8BBE;<script type="math/tex; ">E_1, E_2, \ldots \in \Ical</script>&#x4E14;&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x82E5;<script type="math/tex; ">\cup_{j=1}^\infty E_j \in \Ical</script>&#xFF0C;&#x5219;<script type="math/tex; ">m(\cup_{j=1}^\infty E_j) = \sum_{j=1}^\infty m(E_j)</script>&#xFF1B;</li>
+<li><span class="violet">&#x53EF;&#x6570;&#x6B21;&#x53EF;&#x52A0;&#x6027;</span>&#xFF1A;&#x8BBE;<script type="math/tex; ">E_1, E_2, \ldots \in \Ical</script>&#xFF0C;&#x82E5;<script type="math/tex; ">\cup_{j=1}^\infty E_j \in \Ical</script>&#xFF0C;&#x5219;<script type="math/tex; ">m(\cup_{j=1}^\infty E_j) \leq \sum_{j=1}^\infty m(E_j)</script>&#xFF1B;</li>
+<li><span class="violet">&#x5E73;&#x79FB;&#x4E0D;&#x53D8;&#x6027;</span>&#xFF1A;&#x5BF9;<script type="math/tex; ">\forall E \in \Ical</script>&#x548C;<script type="math/tex; ">x_0 \in \Rbb</script>&#xFF0C;<script type="math/tex; ">E + x_0 \triangleq \{ x + x_0 \mid x \in E \} \in \Ical</script>&#x4E14;<script type="math/tex; ">m(E + x_0) = m(E)</script>&#x3002;</li>
+</ol>
+<p>&#x3000;&#x3000;&#x53EF;&#x6570;&#x53EF;&#x52A0;&#x6027;&#x3001;&#x53EF;&#x6570;&#x6B21;&#x53EF;&#x52A0;&#x6027;&#x5206;&#x522B;&#x662F;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x3001;&#x6709;&#x9650;&#x6B21;&#x53EF;&#x52A0;&#x6027;&#x7684;&#x63A8;&#x5E7F;&#xFF0C;&#x4EE4;<script type="math/tex; ">E_{n+1} = E_{n+2} = \cdots = \emptyset</script>&#x5373;&#x53EF;&#x7531;&#x524D;&#x8005;&#x5BFC;&#x51FA;&#x540E;&#x8005;&#x3002;&#x6B64;&#x5916;&#x53EF;&#x6570;(&#x6B21;)&#x53EF;&#x52A0;&#x6027;&#x7684;&#x524D;&#x63D0;&#x662F;<script type="math/tex; ">\cup_{j=1}^\infty E_j \in \Ical</script>&#xFF0C;&#x5426;&#x5219;<script type="math/tex; ">m(\cup_{j=1}^\infty E_j)</script>&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x8981;&#x6C42;<script type="math/tex; ">\Ical</script>&#x662F;&#x4E00;&#x4E2A;<script type="math/tex; ">\sigma</script>-&#x4EE3;&#x6570;&#x3002;</p>
+<p><strong>&#x8BC1;&#x660E;</strong>&#xFF1A;</p>
+<ol>
+<li><p>&#x53EA;&#x9700;&#x8BC1;&#x660E;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x60C5;&#x51B5;&#x5373;&#x53EF;&#x7531;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#x77E5;&#x7ED3;&#x8BBA;&#x5BF9;&#x4EFB;&#x610F;&#x81EA;&#x7136;&#x6570;<script type="math/tex; ">n</script>&#x90FD;&#x6210;&#x7ACB;&#x3002;&#x8BBE;<script type="math/tex; ">E_1 \cup E_2 = \cup_{j \in [n']} I_j</script>&#xFF0C;&#x5219;<script type="math/tex; ">m(E_1 \cup E_2) = \sum_{j \in [n']} m(I_j)</script>&#x3002;&#x6CE8;&#x610F;&#x6784;&#x6210;<script type="math/tex; ">E_1</script>&#x7684;&#x6BCF;&#x4E2A;&#x533A;&#x95F4;&#x5FC5;&#x7136;&#x90FD;&#x5C5E;&#x4E8E;&#x67D0;&#x4E2A;<script type="math/tex; ">I_j</script>&#xFF0C;&#x6545;&#x5176;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#x4E3A;<script type="math/tex; ">E_1 = \cup_{j \in [n']} (E_1 \cap I_j)</script>&#xFF0C;&#x5373;<script type="math/tex; ">m(E_1) = \sum_{j \in [n']} m(E_1 \cap I_j)</script>&#xFF0C;&#x540C;&#x7406;<script type="math/tex; ">m(E_2) = \sum_{j \in [n']} m(E_2 \cap I_j)</script>&#xFF0C;&#x4E8E;&#x662F;&#x5F85;&#x8BC1;&#x7ED3;&#x8BBA;&#x53D8;&#x6210;
+\begin{align*}
+ \sum_{j \in [n&apos;]} m(I_j) = \sum_{j \in [n&apos;]} m(E_1 \cap I_j) + \sum_{j \in [n&apos;]} m(E_2 \cap I_j)
+\end{align*}
+&#x5373;&#x53EA;&#x9700;&#x8BC1;<script type="math/tex; ">m(I_j) = m(E_1 \cap I_j) + m(E_2 \cap I_j)</script>&#x3002;&#x6CE8;&#x610F;<script type="math/tex; ">E_1 \cap I_j</script>&#x3001;<script type="math/tex; ">E_2 \cap I_j</script>&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x533A;&#x95F4;&#x5747;&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x53C8;&#x8FD9;&#x4E9B;&#x533A;&#x95F4;&#x7684;&#x5E76;&#x96C6;&#x662F;&#x533A;&#x95F4;<script type="math/tex; ">I_j</script>&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x4E9B;&#x533A;&#x95F4;&#x5199;&#x6210;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#x662F;&#x9996;&#x5C3E;&#x76F8;&#x8FDE;&#x7684;(&#x524D;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x53F3;&#x7AEF;&#x70B9;&#x7B49;&#x4E8E;&#x540E;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x5DE6;&#x7AEF;&#x70B9;)&#xFF0C;&#x4ECE;&#x800C;<script type="math/tex; ">m(I_j) = m(E_1 \cap I_j) + m(E_2 \cap I_j)</script>&#x3002;</p>
+</li>
+<li><p>&#x82E5;<script type="math/tex; ">E_1 \subseteq E_2</script>&#xFF0C;&#x5219;<script type="math/tex; ">E_2 = E_1 \cup (E_2 \setminus E_1)</script>&#x4E14;<script type="math/tex; ">E_1 \cap (E_2 \setminus E_1) = \emptyset</script>&#xFF0C;&#x7531;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x548C;&#x957F;&#x5EA6;&#x51FD;&#x6570;&#x7684;&#x975E;&#x8D1F;&#x6027;&#x77E5;
+\begin{align*}
+ m(E_2) = m(E_1) + m(E_2 \setminus E_1) \geq m(E_1)
+\end{align*}</p>
+</li>
+<li><p>&#x53EA;&#x9700;&#x8BC1;&#x660E;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x60C5;&#x51B5;&#x5373;&#x53EF;&#x7531;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#x77E5;&#x7ED3;&#x8BBA;&#x5BF9;&#x4EFB;&#x610F;&#x81EA;&#x7136;&#x6570;<script type="math/tex; ">n</script>&#x90FD;&#x6210;&#x7ACB;&#x3002;&#x7531;&#x4E8E;<script type="math/tex; ">E_1 \cup E_2 = E_1 \cup (E_2 \setminus E_1)</script>&#x4E14;<script type="math/tex; ">E_1 \cap (E_2 \setminus E_1) = \emptyset</script>&#xFF0C;&#x53C8;<script type="math/tex; ">(E_2 \setminus E_1) \subseteq E_2</script>&#xFF0C;&#x7531;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x548C;&#x5355;&#x8C03;&#x6027;&#x77E5;
+\begin{align*}
+ m(E_1 \cup E_2) = m(E_1) + m(E_2 \setminus E_1) \leq m(E_1) + m(E_2)
+\end{align*}</p>
+</li>
+<li><p>&#x7531;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x7684;&#x8BC1;&#x660E;&#x77E5;&#x53EA;&#x9700;&#x8003;&#x8651;<script type="math/tex; ">\cup_{j=1}^\infty E_j</script>&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x533A;&#x95F4;<script type="math/tex; ">I</script>&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x8BBE;<script type="math/tex; ">E_j = \cup_{k \in [n_j]} I_{j,k}</script>&#xFF0C;&#x4E8E;&#x662F;
+\begin{align*}
+ I = E_1 \cup E_2 \cup \cdots = I_{1,1} \cup I_{1,2} \cup \cdots \cup I_{1,n_1} \cup I_{2,1} \cup I_{2,2} \cup \cdots \cup I_{2,n_2} \cup I_{3,1} \cup \cdots
+\end{align*}
+&#x7531;&#x4E8E;<script type="math/tex; ">E_1, E_2, \ldots</script>&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x56E0;&#x6B64;&#x4E0A;&#x5F0F;&#x4E2D;&#x7684;&#x53EF;&#x6570;&#x65E0;&#x7A77;&#x9879;<script type="math/tex; ">I_{j,k}</script>&#x5747;&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#xFF0C;&#x5C06;&#x5176;&#x5199;&#x6210;&#x6807;&#x51C6;&#x5F62;&#x5F0F;&#xFF1A;
+\begin{align*}
+ I = I_1 \cup I_2 \cup \cdots = \cup_{k=1}^\infty I_k
+\end{align*}
+&#x6CE8;&#x610F;<script type="math/tex; ">m(E_j) = \sum_{k \in [n_j]} m(I_{j,k})</script>&#xFF0C;&#x4E8E;&#x662F;&#x5F85;&#x8BC1;&#x7ED3;&#x8BBA;&#x53D8;&#x6210;
+\begin{align*}
+ m(I) = m(\cup_{k=1}^\infty I_k) = \sum_{k=1}^\infty m(I_k)
+\end{align*}
+&#x5BF9;&#x4EFB;&#x610F;&#x81EA;&#x7136;&#x6570;<script type="math/tex; ">n</script>&#xFF0C;&#x7531;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x548C;&#x5355;&#x8C03;&#x6027;&#x77E5;
+\begin{align*}
+ \sum_{k \in [n]} m(I_k) = m(\cup_{k \in [n]} I_k) \leq m(\cup_{k=1}^\infty I_k) = m(I)
+\end{align*}
+&#x4EE4;<script type="math/tex; ">n \rightarrow \infty</script>&#x53EF;&#x5F97;<script type="math/tex; ">\sum_{k=1}^\infty m(I_k) \leq m(I)</script>&#x3002;</p>
+<p> &#x4E0B;&#x9762;&#x8BC1;&#x660E;&#x53E6;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#xFF0C;&#x4E0D;&#x59A8;&#x8BBE;&#x6240;&#x6709;&#x7684;<script type="math/tex; ">I_k</script>&#x90FD;&#x662F;&#x6709;&#x754C;&#x533A;&#x95F4;(&#x5426;&#x5219;&#x82E5;&#x67D0;&#x4E2A;<script type="math/tex; ">I_k</script>&#x65E0;&#x754C;&#xFF0C;&#x5219;<script type="math/tex; ">I</script>&#x4E5F;&#x65E0;&#x754C;&#xFF0C;&#x4E0A;&#x5F0F;&#x4E24;&#x8FB9;&#x90FD;&#x662F;<script type="math/tex; ">\infty</script>)&#xFF0C;&#x5219;&#x5BF9;<script type="math/tex; ">\forall \epsilon > 0</script>&#xFF0C;&#x5B58;&#x5728;&#x5F00;&#x533A;&#x95F4;<script type="math/tex; ">J_k</script>&#x4ECE;&#x5916;&#x90E8;&#x5145;&#x5206;&#x903C;&#x8FD1;<script type="math/tex; ">I_k</script>&#xFF0C;&#x5373;<script type="math/tex; ">I_k \subseteq J_k</script>&#x4E14;<script type="math/tex; ">m(J_k) < m(I_k) + \epsilon / 2^k</script>&#x3002;&#x5F15;&#x5165;&#x6709;&#x754C;&#x95ED;&#x533A;&#x95F4;<script type="math/tex; ">[a_0, b_0] \subseteq I</script>&#xFF0C;&#x4E8E;&#x662F;
+ \begin{align*} [a_0, b_0] \subseteq I = \cup_{k=1}^\infty I_k \subseteq \cup_{k=1}^\infty J_k
+ \end{align*}
+ &#x5373;<script type="math/tex; ">J_1, J_2, \ldots</script>&#x662F;&#x6709;&#x754C;&#x95ED;&#x533A;&#x95F4;<script type="math/tex; ">[a_0, b_0]</script>&#x7684;&#x4E00;&#x4E2A;<span class="violet">&#x5F00;&#x8986;&#x76D6;</span>(open cover)&#xFF0C;&#x7531;Heine-Borel&#x5B9A;&#x7406;&#x77E5;&#x5176;<span class="violet">&#x5B58;&#x5728;&#x6709;&#x9650;&#x5B50;&#x8986;&#x76D6;</span>&#xFF0C;&#x4E0D;&#x59A8;&#x8BBE;&#x5B50;&#x8986;&#x76D6;&#x7684;&#x4E0B;&#x6807;&#x96C6;&#x5408;&#x662F;<script type="math/tex; ">\Ical'</script>&#xFF0C;&#x4E8E;&#x662F;&#x7531;&#x6709;&#x9650;&#x53EF;&#x52A0;&#x6027;&#x548C;&#x5355;&#x8C03;&#x6027;&#x77E5;
+ \begin{align*} a_0 - b_0 = m([a_0, b_0]) \leq \sum_{k \in \Ical&apos;} m(J_k) &lt; \sum_{k \in \Ical&apos;} \left( m(I_k) + \frac{\epsilon}{2^k} \right) \leq \sum_{k=1}^\infty \left( m(I_k) + \frac{\epsilon}{2^k} \right) = \epsilon + \sum_{k=1}^\infty m(I_k)
+ \end{align*}
+ &#x82E5;<script type="math/tex; ">I</script>&#x65E0;&#x754C;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x53D6;<script type="math/tex; ">[a_0, b_0]</script>&#x4F7F;&#x5F97;<script type="math/tex; ">b_0 - a_0</script>&#x4EFB;&#x610F;&#x7684;&#x5927;&#xFF0C;&#x800C;<script type="math/tex; ">\epsilon</script>&#x53C8;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x7684;&#x5C0F;&#xFF0C;&#x4E8E;&#x662F;&#x6709;<script type="math/tex; ">\sum_{k=1}^\infty m(I_k) = \infty = m(I)</script>&#xFF1B;&#x82E5;<script type="math/tex; ">I</script>&#x6709;&#x754C;&#xFF0C;&#x9009;&#x53D6;<script type="math/tex; ">[a_0, b_0]</script>&#x4ECE;&#x5185;&#x90E8;&#x5145;&#x5206;&#x903C;&#x8FD1;<script type="math/tex; ">I</script>&#xFF0C;&#x5373;&#x4F7F;&#x5F97;<script type="math/tex; ">b_0 - a_0 > m(I) - \epsilon</script>&#xFF0C;&#x4E8E;&#x662F;&#x6709;
+ \begin{align*} m(I) - \epsilon &lt; \epsilon + \sum_{k=1}^\infty m(I_k)
+ \end{align*}
+ &#x7531;&#x4E8E;<script type="math/tex; ">\epsilon</script>&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x7684;&#x5C0F;&#xFF0C;&#x6545;<script type="math/tex; ">m(I) \leq \sum_{k=1}^\infty m(I_k)</script>&#x3002;</p>
+<p> &#x7EFC;&#x4E0A;&#x6709;<script type="math/tex; ">m(\cup_{k=1}^\infty I_k) = m(I) = \sum_{k=1}^\infty m(I_k)</script>&#x3002;</p>
+</li>
+<li><p>&#x4EE4;<script type="math/tex; ">F_j = E_j \setminus (\cup_{k \in [j-1]} E_k) \subseteq E_j</script>&#xFF0C;&#x6613;&#x77E5;<script type="math/tex; ">F_1, F_2, \ldots</script>&#x4E24;&#x4E24;&#x4E0D;&#x76F8;&#x4EA4;&#x4E14;&#x5BF9;&#x4EFB;&#x610F;&#x81EA;&#x7136;&#x6570;<script type="math/tex; ">n</script>&#x6709;<script type="math/tex; ">\cup_{j \in [n]} F_j = \cup_{j \in [n]} E_j</script>&#xFF0C;&#x4E8E;&#x662F;
+\begin{align*}
+ m(\cup_{j \in [n]} E_j) = m(\cup_{j \in [n]} F_j) = \sum_{j \in [n]} m(F_j) \leq \sum_{j \in [n]} m(E_j)
+\end{align*}
+&#x4EE4;<script type="math/tex; ">n \rightarrow \infty</script>&#x53EF;&#x77E5;<script type="math/tex; ">m(\cup_{j=1}^\infty E_j) \leq \sum_{j=1}^\infty m(E_j)</script>&#x3002;</p>
+</li>
+<li><p>&#x8BBE;<script type="math/tex; ">E = \cup_{j \in [n]} I_j</script>&#xFF0C;&#x5219;<script type="math/tex; ">E + x_0 = \cup_{j \in [n]} (I_j + x_0)</script>&#x3002;&#x82E5;<script type="math/tex; ">I_j</script>&#x6709;&#x754C;&#xFF0C;&#x8BBE;&#x5176;&#x7AEF;&#x70B9;&#x5206;&#x522B;&#x4E3A;<script type="math/tex; ">a</script>&#x3001;<script type="math/tex; ">b</script>&#xFF0C;&#x5219;<script type="math/tex; ">I_j + x_0</script>&#x4F9D;&#x7136;&#x6709;&#x754C;&#x4E14;&#x7AEF;&#x70B9;&#x5206;&#x522B;&#x4E3A;<script type="math/tex; ">a + x_0</script>&#x3001;<script type="math/tex; ">b + x_0</script>&#xFF0C;&#x4E8E;&#x662F;<script type="math/tex; ">m(I_j + x_0) = (b + x_0) - (a + x_0) = b - a = m(I_j)</script>&#xFF1B;&#x82E5;<script type="math/tex; ">I_j</script>&#x65E0;&#x754C;&#xFF0C;&#x5219;<script type="math/tex; ">I_j + x_0</script>&#x4E5F;&#x65E0;&#x754C;(<script type="math/tex; ">\pm \infty + x_0 = \pm \infty</script>)&#xFF0C;&#x4E14;<script type="math/tex; ">m(I_j + x_0) = \infty = m(I_j)</script>&#xFF0C;&#x7EFC;&#x4E0A;&#x6709;<script type="math/tex; ">m(E + x_0) = m(E)</script>&#x3002;</p>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Avanti 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-19 10:20:29
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="set-ring-algebra-ring.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 此环非彼环乎？">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"区间","level":"1.4.3","depth":2,"next":{"title":"概率","level":"1.5","depth":1,"ref":"","articles":[{"title":"Beta 分布和 Dirichlet 分布","level":"1.5.1","depth":2,"path":"posts/probability/beta-dirichlet-distribution.md","ref":"posts/probability/beta-dirichlet-distribution.md","articles":[]},{"title":"共轭先验","level":"1.5.2","depth":2,"path":"posts/probability/conjugate-prior.md","ref":"posts/probability/conjugate-prior.md","articles":[]}]},"previous":{"title":"此环非彼环乎？","level":"1.4.2","depth":2,"path":"posts/measure/set-ring-algebra-ring.md","ref":"posts/measure/set-ring-algebra-ring.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax@git+https://github.com/CHN-beta/plugin-mathjax.git#update_cdn","splitter","disqus","donate","github","github-buttons","copy-code-button","-lunr","-search","search-plus","advanced-emoji","emphasize","mermaid-gb3","puml","graph","chart","-sharing","sharing-plus","tbfed-pagefooter","anchors","terminal"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Avanti 2020","modify_label":"文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"notes-math"},"emphasize":{},"github":{"url":"https://github.com/Avanti1980"},"puml":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/zfb.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"https://raw.githubusercontent.com/Avanti1980/notes-on-math/master/img/wx.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"github-buttons":{},"mathjax":{"forceSVG":false,"version":"2.7.1"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"Avanti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Notes on Math","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"数学笔记"},"file":{"path":"posts/measure/interval.md","mtime":"2021-06-19T02:20:29.756Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-14T08:03:33.998Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
