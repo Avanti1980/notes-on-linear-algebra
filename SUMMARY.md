@@ -2,8 +2,8 @@
 
 - [简介](README.md)
 - 微积分
-  - [Wallis 公式](posts/calculus/Wallis-formula.md)
-  - [Gamma 函数](posts/calculus/gamma.md)
+  - [沃利斯公式](posts/calculus/Wallis-formula.md)
+  - [伽玛函数](posts/calculus/gamma.md)
 - 线性代数
   - 矩阵
     - [导数](posts/matrix/derivative.md)
@@ -11,13 +11,13 @@
     - [全幺模矩阵](posts/matrix/TU-matrix.md)
     - [核范数球](/posts/matrix/nuclear-norm-ball.md)
   - 行列式
-    - [Cauchy-Binet 公式](posts/determinant/Cauchy-Binet.md)
+    - [柯西-比内公式](posts/determinant/Cauchy-Binet.md)
 - 测度论
   - [集合代数](posts/measure/set-algebra.md)
   - [此环非彼环乎？](posts/measure/set-ring-algebra-ring.md)
   - [区间](posts/measure/interval.md)
 - 概率
-  - [Beta 分布和 Dirichlet 分布](posts/probability/beta-dirichlet-distribution.md)
+  - [贝塔分布和狄利克雷分布](posts/probability/beta-dirichlet-distribution.md)
   - [共轭先验](posts/probability/conjugate-prior.md)
 - 优化
   - 分析
