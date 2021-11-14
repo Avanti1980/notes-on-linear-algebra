@@ -436,7 +436,7 @@
 \begin{align\*}
     \frac{\partial \Yv}{\partial x\_{ji}} = \frac{\partial (\Av \Xv \Bv)}{\partial x\_{ji}} = \Av \frac{\partial \Xv}{\partial x\_{ji}} \Bv = \Av \Ev\_{ji} \Bv
 \end{align\*}
-记$y_{ji}$有一个微小增量$\epsilon$后的矩阵为$\Yv(y_{ji} + \epsilon)$，根据第$j$行Laplace展开易知
+记$y_{ji}$有一个微小增量$\epsilon$后的矩阵为$\Yv(y_{ji} + \epsilon)$，根据第$j$行拉普拉斯展开易知
 \begin{align\*}
     |\Yv(y\_{ji} + \epsilon)| - |\Yv| = \epsilon C\_{ji}
 \end{align\*}
@@ -456,7 +456,7 @@
 代入可得
 \begin{align\*}
     \left[ \frac{\partial |\Av \Xv \Bv|}{\partial \Xv} \right]\_{ij} & = \tr \left( \frac{\partial |\Yv|}{\partial \Yv} \frac{\partial \Yv}{\partial x\_{ji}} \right) = \tr (\Yv^\* \Av \Ev\_{ji} \Bv) = [\Bv \Yv^\* \Av]\_{ij} \\\\
-                                                                    & \Longrightarrow \class{blue}{\frac{\partial |\Av \Xv \Bv|}{\partial \Xv} = \Bv (\Av \Xv \Bv)^\* \Av}
+    & \Longrightarrow \class{blue}{\frac{\partial |\Av \Xv \Bv|}{\partial \Xv} = \Bv (\Av \Xv \Bv)^\* \Av}
 \end{align\*}
 若$\Xv$、$\Av$、$\Bv$均为可逆方阵，则$\Yv = \Av \Xv \Bv$亦为可逆方阵，于是
 \begin{align} \label{eq: determinant}
